@@ -1,0 +1,77 @@
+@import "src/assets/css/mixin";
+@import "src/assets/css/colors";
+@import "src/assets/css/animations";
+
+.contact {
+  display: flex;
+  color: white;
+  width: 100%;
+
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+    .title {
+      font-size: 36px;
+      position: relative;
+      padding-left: 150px;
+
+      &:before {
+        @include tagBefore;
+        content: "<h2>";
+        top: 40px;
+        left: 100px;
+      }
+
+      &:after {
+        @include tagAfter;
+        content: "<h2/>";
+        bottom: 40px;
+        left: 100px;
+      }
+    }
+
+    .subTitle {
+      font-size: 16px;
+      position: relative;
+      padding-left: 150px;
+      margin-top: 50px;
+
+      &:before {
+        @include tagBefore;
+        content: "<p>";
+        top: 10px;
+        left: 100px;
+      }
+
+      &:after {
+        @include tagAfter;
+        content: "<p/>";
+        bottom: 10px;
+        left: 100px;
+      }
+    }
+
+  }
+
+  iframe {
+    width: 50%;
+    height: 100vh;
+  }
+
+  &:before {
+    @include tagBefore;
+    content: "<body>";
+    top: 40px;
+    left: 200px;
+  }
+
+  &:after {
+    @include tagAfter;
+    content: "<body/>";
+    bottom: 40px;
+    left: 200px;
+  }
+}

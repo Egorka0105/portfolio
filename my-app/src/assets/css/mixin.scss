@@ -1,0 +1,14 @@
+@import "src/assets/css/colors";
+@mixin tagBefore {
+  font-family: 'La Belle Aurore', cursive;
+  color: $tagColor;
+  font-size: 18px;
+  position: absolute;
+}
+
+@mixin tagAfter {
+  font-family: 'La Belle Aurore', cursive;
+  color: $tagColor;
+  font-size: 18px;
+  position: absolute;
+}

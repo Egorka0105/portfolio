@@ -1,4 +1,6 @@
+@import "src/assets/css/colors";
 .logoBlock{
+   color: $logo-text;
   h2{
     .letter{
       font-family: 'Lobster', cursive;

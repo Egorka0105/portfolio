@@ -1,3 +1,4 @@
+@import "src/assets/css/colors";
 .header{
   display: flex;
   flex-direction: column;
@@ -7,4 +8,6 @@
   left: 0;
   width: 150px;
   height: 100vh;
+  background-color: $headerBackground;
+  border-right: 1px solid $header-border;
 }

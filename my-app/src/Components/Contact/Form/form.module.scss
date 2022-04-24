@@ -1,0 +1,48 @@
+@import "src/assets/css/mixin";
+@import "src/assets/css/colors";
+@import "src/assets/css/animations";
+
+.form {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 20px;
+  justify-content: space-between;
+
+  input,textarea{
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .name {
+    flex: 1 45%;
+    margin-right: 5px;
+  }
+
+  .email {
+    flex: 1 45%;
+    margin-left: 5px;
+  }
+
+  .message {
+    flex: 1 0 100%;
+    margin-top: 10px;
+
+  }
+
+  &:before {
+    @include tagBefore;
+    content: "<form>";
+    top: 40px;
+    left: 100px;
+  }
+
+  &:after {
+    @include tagAfter;
+    content: "<form/>";
+    bottom: 40px;
+    left: 100px;
+  }
+}

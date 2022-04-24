@@ -1,0 +1,130 @@
+@import "src/assets/css/colors";
+@import "src/assets/css/mixin";
+@import "src/assets/css/animations";
+
+.banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+
+  &__title {
+    position: relative;
+    margin-left: 100px;
+    font-size: 64px;
+    letter-spacing: 4px;
+    padding: 10px;
+
+
+    span {
+      transition: all 0.3s ease-out;
+      display: inline-block;
+
+      &:hover {
+        color: aquamarine;
+        animation: bannerText 1s;
+      }
+    }
+
+    &:before {
+      content: "<h1>";
+      @include tagBefore;
+      top: -20px;
+      left: -10px;
+    }
+
+    &:after {
+      content: "<h1/>";
+      @include tagAfter;
+      bottom: -30px;
+      left: -10px;
+    }
+  }
+
+  &__subTitle {
+    padding: 10px;
+    position: relative;
+    margin-left: 100px;
+    margin-top: 60px;
+    letter-spacing: 4px;
+    display: block;
+    color: $bannerSubTitle;
+
+    &:before {
+      content: "<p>";
+      @include tagBefore;
+      top: -25px;
+      left: -10px;
+    }
+
+    &:after {
+      content: "<p/>";
+      @include tagAfter;
+      bottom: -30px;
+      left: -10px;
+    }
+  }
+
+  &__btnContact {
+    position: relative;
+    margin-left: 100px;
+    margin-top: 80px;
+    letter-spacing: 4px;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: $bannerBtnBackground;
+    color: $bannerBtnText;
+    border: 1px solid $bannerBtnBorder;
+    border-radius: 4px;
+    transition: 1s ease;
+
+    &:hover {
+      color: $bannerBtnHoverText;
+      background-color: $bannerBtnHoverBackground;
+      transition: 1s ease;
+    }
+
+    &:before {
+      content: "<button>";
+      @include tagBefore;
+      top: -30px;
+      left: -10px;
+    }
+
+    &:after {
+      content: "<button/>";
+      @include tagAfter;
+      bottom: -40px;
+      left: -10px;
+    }
+  }
+
+  &__canvas{
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:before {
+    @include tagBefore;
+    content: "<body>";
+    top: 40px;
+    left: 200px;
+  }
+
+  &:after {
+    @include tagAfter;
+    content: "<body/>";
+    bottom: 40px;
+    left: 200px;
+  }
+
+}
+
+
+

@@ -5,6 +5,7 @@ import Contact from "./Components/Contact/Contact";
 import Skills from "./Components/Skills/Skills";
 import Works from "./Components/Works/Works";
 import {Route, Routes} from "react-router-dom";
+import Banner from "./Components/Banner/Banner";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
             <Header/>
             <main className={'main'}>
                 <Routes>
+                    <Route path={''} element={<Banner/>}/>
                     <Route path={'about'} element={<About/>}/>
                     <Route path={'skills'} element={<Skills/>}/>
                     <Route path={'works'} element={<Works/>}/>
