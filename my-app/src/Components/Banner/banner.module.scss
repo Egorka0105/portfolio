@@ -19,12 +19,13 @@
 
 
     span {
-      transition: all 0.3s ease-out;
+      transition: all 0.8s ease-out;
       display: inline-block;
 
       &:hover {
         color: aquamarine;
         animation: bannerText 1s;
+        transition: all 0.8s ease-out;
       }
     }
 

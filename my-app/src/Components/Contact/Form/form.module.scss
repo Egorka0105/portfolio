@@ -4,16 +4,16 @@
 
 .form {
   display: flex;
-  padding: 20px;
+  padding: 30px 30px 30px 140px;
   flex-wrap: wrap;
   position: relative;
   margin-top: 20px;
   justify-content: space-between;
 
-  input,textarea{
-    border: none;
+  input, textarea {
     padding: 10px;
     font-size: 16px;
+    border-radius: 4px;
   }
 
   .name {
@@ -29,20 +29,38 @@
   .message {
     flex: 1 0 100%;
     margin-top: 10px;
+    height: 150px;
+  }
 
+  .submit {
+    margin-top: 30px;
+    background-color: transparent;
+    padding: 10px 40px;
+    border-radius: 4px;
+    border: 1px solid white;
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: white;
+    transition: 1s ease;
+
+    &:hover {
+      color: black;
+      background-color: white;
+      transition: 1s ease;
+    }
   }
 
   &:before {
     @include tagBefore;
     content: "<form>";
-    top: 40px;
+    top: 0;
     left: 100px;
   }
 
   &:after {
     @include tagAfter;
     content: "<form/>";
-    bottom: 40px;
+    bottom: -10px;
     left: 100px;
   }
 }
