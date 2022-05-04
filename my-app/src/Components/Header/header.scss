@@ -10,4 +10,5 @@
   height: 100vh;
   background-color: $headerBackground;
   border-right: 1px solid $header-border;
+  z-index: 99;
 }

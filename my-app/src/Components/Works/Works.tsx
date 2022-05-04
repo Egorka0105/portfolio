@@ -1,10 +1,14 @@
 import React from 'react';
+import ModalWindowNavAnimation from "../ModalWindowNavAnimation/ModalWindowNavAnimation";
 
 const Works = () => {
     return (
-        <div>
+        <>
+            <ModalWindowNavAnimation/>
+            <div>
 
-        </div>
+            </div>
+        </>
     );
 };
 

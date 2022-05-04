@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import clN from "./navBar.module.scss"
+import {useAppDispatch} from "core/interfaces";
+import {modalNavAnimationOpen} from "store/portfolioSlice"
 
 const NavBar = () => {
+    const dispatch = useAppDispatch();
+
     return (
         <nav className={clN.navBar}>
-            <NavLink className={clN.navBar__item} to={"about"}>
+            <NavLink onClick={() => {
+                dispatch(modalNavAnimationOpen(true))
+            }} className={clN.navBar__item} to={"about"}>
                 About
             </NavLink>
             <NavLink className={clN.navBar__item} to={"skills"}>

@@ -27,3 +27,40 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+@keyframes waiting {
+  0% {
+    height: 0;
+    border-bottom: 2px solid red;
+
+  }
+  50% {
+    height: 100%;
+    border-bottom: 2px solid yellow;
+
+  }
+  100% {
+    height: 0;
+    border-bottom: 0 solid green;
+  }
+}
+
+@keyframes openModalBlock {
+  0%{
+    transform: translateX(-120%);
+    display: flex;
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes closeModalBlock {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(120%);
+    display: none;
+  }
+}

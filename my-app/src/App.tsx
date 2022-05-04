@@ -6,6 +6,7 @@ import Skills from "./Components/Skills/Skills";
 import Works from "./Components/Works/Works";
 import {Route, Routes} from "react-router-dom";
 import Banner from "./Components/Banner/Banner";
+import ModalWindowNavAnimation from "./Components/ModalWindowNavAnimation/ModalWindowNavAnimation";
 
 
 function App() {
