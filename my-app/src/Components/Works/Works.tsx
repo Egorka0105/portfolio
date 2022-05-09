@@ -5,8 +5,10 @@ const Works = () => {
     return (
         <>
             <ModalWindowNavAnimation/>
-            <div>
-
+            <div className={"inProgress"}>
+                <h2>
+                    In Progress
+                </h2>
             </div>
         </>
     );

@@ -1,4 +1,6 @@
 @import "src/assets/css/colors";
+@import "src/assets/css/animations";
+
 .header{
   display: flex;
   flex-direction: column;
@@ -11,4 +13,19 @@
   background-color: $headerBackground;
   border-right: 1px solid $header-border;
   z-index: 99;
+  overflow: hidden;
+  animation: headerView 1s ease-in-out;
+
+  .downloadCV-link{
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: 10px;
+  }
 }

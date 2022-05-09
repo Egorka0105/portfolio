@@ -28,6 +28,15 @@
   }
 }
 
+@keyframes headerView {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes waiting {
   0% {
     height: 0;
@@ -46,20 +55,20 @@
 }
 
 @keyframes openModalBlock {
-  0%{
+  0% {
     transform: translateX(-120%);
     display: flex;
   }
-  100%{
+  100% {
     transform: translateX(0);
   }
 }
 
 @keyframes closeModalBlock {
-  0%{
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(120%);
     display: none;
   }

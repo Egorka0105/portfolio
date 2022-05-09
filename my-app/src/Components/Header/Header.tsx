@@ -3,6 +3,7 @@ import "./header.scss"
 import Logo from "./Logo/Logo";
 import Links from "./Links/Links";
 import NavBar from "./NavBar/NavBar";
+import CvLink from "./CVLink";
 
 const Header = () => {
 
@@ -11,6 +12,7 @@ const Header = () => {
             <Logo/>
             <NavBar/>
             <Links/>
+            <CvLink/>
         </div>
     );
 };

@@ -8,6 +8,7 @@ const Form: FC = () => {
 
     const handlerSubmit = (e: FormEvent) => {
         e.preventDefault();
+
     }
 
 
@@ -19,7 +20,7 @@ const Form: FC = () => {
             }} className={clN.name} type={"text"} required={true} placeholder={'Name'}/>
             <input onChange={(e) => {
                 setEmail(e.target.value)
-            }} className={clN.email} type={"email"} required={true} placeholder={'Email'}/>
+            }} className={clN.email} type={"email"} required={true} placeholder={'Email'} pattern={"/^[a-zA-Z0-9\d]/"}/>
             <textarea onChange={(e) => {
                 setMessage(e.target.value)
             }} className={clN.message} required={true} placeholder={"Message"}/>

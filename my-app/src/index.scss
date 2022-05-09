@@ -52,18 +52,24 @@ input, textarea {
 
   &:before {
     content: "<html>";
-    @include tagBefore;
-    top: 10px;
-    left: 160px;
-
+    @include tagBefore(160px, 10px);
   }
 
   &:after {
     content: "<html/>";
-    @include tagAfter;
-    bottom: 10px;
-    left: 160px;
+    @include tagAfter(160px, 10px);
   }
 }
 
+.inProgress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+
+  h2 {
+    font-size: 60px;
+  }
+}
 

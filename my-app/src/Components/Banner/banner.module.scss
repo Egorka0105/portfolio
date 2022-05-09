@@ -31,16 +31,12 @@
 
     &:before {
       content: "<h1>";
-      @include tagBefore;
-      top: -20px;
-      left: -10px;
+      @include tagBefore(-10px, -20px);
     }
 
     &:after {
       content: "<h1/>";
-      @include tagAfter;
-      bottom: -30px;
-      left: -10px;
+      @include tagAfter(-10px, -30px);
     }
   }
 
@@ -55,16 +51,12 @@
 
     &:before {
       content: "<p>";
-      @include tagBefore;
-      top: -25px;
-      left: -10px;
+      @include tagBefore(-10px, -25px);
     }
 
     &:after {
       content: "<p/>";
-      @include tagAfter;
-      bottom: -30px;
-      left: -10px;
+      @include tagAfter(-10px, -30px);
     }
   }
 
@@ -89,16 +81,12 @@
 
     &:before {
       content: "<button>";
-      @include tagBefore;
-      top: -30px;
-      left: -10px;
+      @include tagBefore(-10px, -30px);
     }
 
     &:after {
       content: "<button/>";
-      @include tagAfter;
-      bottom: -40px;
-      left: -10px;
+      @include tagAfter(-10px, -40px);
     }
   }
 
@@ -112,17 +100,13 @@
   }
 
   &:before {
-    @include tagBefore;
+    @include tagBefore(200px,40px);
     content: "<body>";
-    top: 40px;
-    left: 200px;
   }
 
   &:after {
-    @include tagAfter;
+    @include tagAfter(200px,40px);
     content: "<body/>";
-    bottom: 40px;
-    left: 200px;
   }
 
 }

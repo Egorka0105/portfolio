@@ -1,0 +1,32 @@
+.skills {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &__textContent {
+    color: white;
+    background-color: red;
+    width: 50%;
+
+    .text {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  &__skillsContent {
+    width: 50%;
+    ul {
+      .skillItem {
+
+        color: white;
+        padding: 10px;
+        background-color: red;
+      }
+    }
+
+  }
+}

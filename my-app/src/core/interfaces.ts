@@ -10,3 +10,8 @@ export interface IInitialState {
     isModalNavAnimationOpen : boolean
 }
 
+export interface ISkill {
+    key: string,
+    name:string,
+    levelPercent: string
+}
