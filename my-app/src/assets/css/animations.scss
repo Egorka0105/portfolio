@@ -28,14 +28,30 @@
   }
 }
 
+// header
+
 @keyframes headerView {
   0% {
     transform: translateX(-120%);
   }
   100% {
     transform: translateX(0);
+    display: flex;
   }
 }
+
+@keyframes headerClose {
+  0% {
+    transform: translateX(0);
+
+  }
+  100% {
+    transform: translateX(-120%);
+    display: none;
+  }
+}
+
+// route animation
 
 @keyframes waiting {
   0% {
@@ -71,5 +87,13 @@
   100% {
     transform: translateX(120%);
     display: none;
+  }
+}
+
+// skills list
+
+@keyframes skillsListOpen {
+  100% {
+    transform: translateX(0);
   }
 }

@@ -1,0 +1,93 @@
+{
+  "menu": {
+    "navBar": {
+      "navBarList": [
+        {
+          "name": "About",
+          "path": "about"
+        },
+        {
+          "name": "Skills",
+          "path": "skills"
+        },
+        {
+          "name": "Works",
+          "path": "works"
+        },
+        {
+          "name": "Contact",
+          "path": "contact"
+        }
+      ],
+      "key": ""
+    }
+  },
+  "links": {
+    "telegram": "https://t.me/Egorka_18",
+    "linkedin": "https://www.linkedin.com/in/ihor-dudkevich-2384391b3/",
+    "gitHub": "https://github.com/Egorka0105"
+  },
+  "skills": {
+    "textAboutSkills": "Hello World!!!!!",
+    "allSkillsMap": [
+      {
+        "key": "htmlItem01",
+        "name": "HTML",
+        "levelPercent": "80"
+      },
+      {
+        "key": "cssItem02",
+        "name": "CSS",
+        "levelPercent": "80"
+      },
+      {
+        "key": "scssItem03",
+        "name": "Scss",
+        "levelPercent": "80"
+      },
+      {
+        "key": "jsItem04",
+        "name": "Js",
+        "levelPercent": "60"
+      },
+      {
+        "key": "gitItem05",
+        "name": "Git",
+        "levelPercent": "50"
+      },
+      {
+        "key": "reactItem06",
+        "name": "React",
+        "levelPercent": "50"
+      },
+      {
+        "key": "reduxToolkitItem07",
+        "name": "Redux-Toolkit",
+        "levelPercent": "40"
+      },
+      {
+        "key": "typeScriptItem08",
+        "name": "TypeScript",
+        "levelPercent": "40"
+      }
+    ],
+    "experience": [
+      {
+        "key": "job01",
+        "companyName": "DevOcean",
+        "dayStart": "09.2021",
+        "dayFinish": "11.2021",
+        "location": "Vinnitsa",
+        "position": "Web Developer"
+      },
+      {
+        "key": "job02",
+        "companyName": "Five System Development",
+        "dayStart": "11.2021",
+        "dayFinish": "Present time",
+        "location": "Vinnitsa",
+        "position": "Front-end Developer"
+      }
+    ]
+  }
+}

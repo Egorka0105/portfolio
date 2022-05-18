@@ -6,10 +6,11 @@ const Logo = () => {
     return (
         <NavLink to={""}>
             <div className={clN.logoBlock}>
-                <h2>
-                    <span className={clN.letter}>I</span>
+                <h2 className={clN.letter}>
+                    I.D
+                    {/*<span className={clN.letter}>I</span>
                     <span className={clN.letter}>.</span>
-                    <span className={clN.letter}>D</span>
+                    <span className={clN.letter}>D</span>*/}
                 </h2>
                 <p className={clN.job}>Web Developer</p>
             </div>

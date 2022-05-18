@@ -1,12 +1,13 @@
 import React, {FC} from 'react';
 import ModalWindowNavAnimation from "../ModalWindowNavAnimation/ModalWindowNavAnimation";
 import clN from "./skills.module.scss"
-import skillsJson from "core/info.json"
-import {ISkill} from "../../core/interfaces";
+import {ISkill, useAppSelector} from "core/interfaces";
 import ItemSkill from "./ItemSkill";
+import Experience from "./Experience/Experience";
 
 const Skills: FC = () => {
-    const allSkills = skillsJson.skills.allSkillsMap;
+    const allSkills = useAppSelector(state => state.portfolio.skills);
+
 
     return (
         <>
@@ -14,15 +15,16 @@ const Skills: FC = () => {
             <div className={clN.skills}>
                 <div className={clN.skills__textContent}>
                     <p className={clN.text}>
-                        {skillsJson.skills.textAboutSkills}
+                        {allSkills.textAboutSkills}
                     </p>
                 </div>
                 <div className={clN.skills__skillsContent}>
                     <ul>
-                        {allSkills.map((el: ISkill) => {
-                            return <ItemSkill key={el.key} skill={el}/>
+                        {allSkills.allSkillsMap.map((el: ISkill) => {
+                            return <ItemSkill key={el.key} name={el.name} level={el.levelPercent}/>
                         })}
                     </ul>
+                    <Experience jobs={allSkills.experience}/>
                 </div>
             </div>
         </>

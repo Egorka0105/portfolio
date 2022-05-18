@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import clN from "./links.module.scss"
-import jsonLinks from "core/info.json"
+import jsonLinks from "core/content.json"
 import telegram from "assets/img/telegram.svg"
 import linkedin from "assets/img/linkedin.svg"
 import gitHub from "assets/img/gitHub.svg"

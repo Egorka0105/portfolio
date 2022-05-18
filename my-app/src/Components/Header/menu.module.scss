@@ -1,7 +1,9 @@
 @import "src/assets/css/colors";
 @import "src/assets/css/animations";
+@import "src/assets/css/mixin";
 
-.header{
+
+.menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +17,20 @@
   z-index: 99;
   overflow: hidden;
   animation: headerView 1s ease-in-out;
+  animation-fill-mode: forwards;
 
-  .downloadCV-link{
+  &.open {
+    left: 0;
+    transition: 1s ease-in-out;
+  }
+
+  @include display-1024 {
+    left: -120%;
+    transition: 1s ease-in-out;
+
+  }
+
+  .downloadCV {
     position: absolute;
     bottom: 20px;
     margin: 0 auto;
