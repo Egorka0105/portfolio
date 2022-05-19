@@ -19,15 +19,15 @@
   animation: headerView 1s ease-in-out;
   animation-fill-mode: forwards;
 
-  &.open {
-    left: 0;
-    transition: 1s ease-in-out;
-  }
 
   @include display-1024 {
     left: -120%;
-    transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
 
+    &.open {
+      left: 0;
+      transition: .5s ease-in-out;
+    }
   }
 
   .downloadCV {
@@ -35,11 +35,14 @@
     bottom: 20px;
     margin: 0 auto;
     text-align: center;
-    color: white;
     font-weight: 700;
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid white;
     padding: 10px;
+
+    & > a {
+      color: white;
+    }
   }
 }

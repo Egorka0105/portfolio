@@ -10,6 +10,10 @@
   margin-top: 20px;
   justify-content: space-between;
 
+  @include display-1200 {
+    padding: 30px 30px 30px 10%;
+  }
+
   input, textarea {
     padding: 10px;
     font-size: 16px;
@@ -19,11 +23,13 @@
   .name {
     flex: 1 45%;
     margin-right: 5px;
+    margin-top: 5px;
   }
 
   .email {
     flex: 1 45%;
     margin-left: 5px;
+    margin-top: 5px;
   }
 
   .message {
@@ -51,16 +57,20 @@
   }
 
   &:before {
-    @include tagBefore;
+    @include tagBefore(100px, 0);
     content: "<form>";
-    top: 0;
-    left: 100px;
+
+    @include display-1024{
+      left: 30px;
+    }
   }
 
   &:after {
-    @include tagAfter;
+    @include tagAfter(100px, -10px);
     content: "<form/>";
-    bottom: -10px;
-    left: 100px;
+
+    @include display-1024{
+      left: 30px;
+    }
   }
 }

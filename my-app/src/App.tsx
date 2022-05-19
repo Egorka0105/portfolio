@@ -16,7 +16,7 @@ function App() {
     const isMobileOpen = useAppSelector(state => state.portfolio.mobileIsOpen)
 
     return (
-        <div>
+        <>
             <Menu/>
             <main className={cn(clN.main, {[clN.blur]: isMobileOpen === true})}>
                 <Routes>
@@ -28,7 +28,7 @@ function App() {
                 </Routes>
             </main>
             <MobileBtn/>
-        </div>
+        </>
     );
 }
 

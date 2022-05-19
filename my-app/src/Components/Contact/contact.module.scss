@@ -6,6 +6,12 @@
   display: flex;
   color: white;
   width: 100%;
+  height: 100%;
+
+  @include display-960 {
+    flex-direction: column;
+    padding: 0 50px;
+  }
 
   .formWrapper {
     display: flex;
@@ -13,23 +19,36 @@
     justify-content: center;
     width: 60%;
 
+    @include display-960 {
+      width: 100%;
+    }
+
     .title {
       font-size: 36px;
       position: relative;
       padding-left: 150px;
 
+      @include display-1024 {
+        padding-left: 40px;
+        text-align: center;
+      }
+
       &:before {
-        @include tagBefore;
+        @include tagBefore(100px, -10px);
         content: "<h2>";
-        top: 40px;
-        left: 100px;
+
+        @include display-1024 {
+          left: 30px;
+        }
       }
 
       &:after {
-        @include tagAfter;
+        @include tagAfter(100px, -10px);
         content: "<h2/>";
-        bottom: 40px;
-        left: 100px;
+
+        @include display-1024 {
+          left: 30px;
+        }
       }
     }
 
@@ -39,18 +58,27 @@
       padding-left: 150px;
       margin-top: 50px;
 
+      @include display-1024 {
+        padding-left: 40px;
+        text-align: center;
+      }
+
       &:before {
-        @include tagBefore;
+        @include tagBefore(100px, -20px);
         content: "<p>";
-        top: 10px;
-        left: 100px;
+
+        @include display-1024 {
+          left: 30px;
+        }
       }
 
       &:after {
-        @include tagAfter;
+        @include tagAfter(100px, -20px);
         content: "<p/>";
-        bottom: 10px;
-        left: 100px;
+
+        @include display-1024 {
+          left: 30px;
+        }
       }
     }
 
@@ -63,16 +91,22 @@
   }
 
   &:before {
-    @include tagBefore;
+    @include tagBefore(200px, 40px);
     content: "<body>";
-    top: 40px;
-    left: 200px;
+
+    @include display-1024 {
+      top: 60px;
+      left: 20px;
+    }
   }
 
   &:after {
-    @include tagAfter;
+    @include tagAfter(200px, 40px);
     content: "<body/>";
-    bottom: 40px;
-    left: 200px;
+
+    @include display-1024 {
+      bottom: 30px;
+      left: 20px;
+    }
   }
 }

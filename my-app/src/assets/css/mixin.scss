@@ -1,4 +1,7 @@
 @import "src/assets/css/colors";
+
+$mobileHeaderHeight: 40px;
+
 @mixin tagBefore($left:0,$top:0) {
   font-family: 'La Belle Aurore', cursive;
   color: $tagColor;
@@ -30,12 +33,6 @@
   }
 }
 
-@mixin display-991 {
-  @media (max-width: 991px) {
-    @content
-  }
-}
-
 @mixin display-960 {
   @media (max-width: 960px) {
     @content
@@ -48,20 +45,14 @@
   }
 }
 
-@mixin display-575 {
-  @media (max-width: 575px) {
-    @content
-  }
-}
-
 @mixin display-480 {
   @media (max-width: 480px) {
     @content
   }
 }
 
-@mixin display-419 {
-  @media (max-width: 419px) {
+@mixin display-320 {
+  @media (max-width: 320px) {
     @content
   }
 }

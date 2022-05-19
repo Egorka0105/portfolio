@@ -54,8 +54,12 @@ input, textarea {
   padding-left: 150px;
   overflow: hidden;
 
+  @include display-1200 {
+    height: 100%;
+  }
+
   @include display-1024 {
-    padding: 0;
+    padding-left: 0;
     transition: 1s ease-in-out;
 
     &.blur {
@@ -71,11 +75,21 @@ input, textarea {
   &:before {
     content: "<html>";
     @include tagBefore(160px, 10px);
+
+    @include display-1024{
+      left: 0;
+      top: $mobileHeaderHeight;
+    }
   }
 
   &:after {
     content: "<html/>";
     @include tagAfter(160px, 10px);
+
+    @include display-1024{
+      left: 0;
+      bottom: 0;
+    }
   }
 }
 

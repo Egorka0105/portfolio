@@ -5,11 +5,11 @@ import CV from "assets/Ihor_Dudkevych.pdf"
 
 const CvLink = () => {
     return (
-        <a className={clN.downloadCV} href={CV} download={true}>
-            Download CV
-        </a>
-
-
+        <div className={clN.downloadCV}>
+            <a  href={CV} download={true}>
+                Download CV
+            </a>
+        </div>
     );
 };
 
