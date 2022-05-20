@@ -11,10 +11,10 @@ const Experience: FC<IProps> = ({jobs}) => {
 
     return (
         <div className={clN.experience}>
-            <h2>Work Experience</h2>
+            <h2 className={clN.title}>Work Experience</h2>
             {jobs.map(el => {
                 return (
-                    <div className={clN.experience__item}>
+                    <div className={clN.experience__jobBlock}>
                         <h5 className={clN.position}>{el.position}</h5>
                         <h6 className={clN.company}>{el.companyName}</h6>
                         <span className={clN.period}>{el.dayStart}</span> - <span

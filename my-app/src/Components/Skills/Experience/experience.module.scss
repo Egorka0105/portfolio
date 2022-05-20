@@ -8,13 +8,13 @@
   flex-wrap: wrap;
   width: 100%;
 
-  & > h2 {
+  .title {
     flex: 1 0 100%;
     text-align: center;
 
   }
 
-  &__item {
+  &__jobBlock {
     padding: 20px 40px;
     background-color: $experienceBackground;
     height: auto;
@@ -22,6 +22,10 @@
     margin-top: 30px;
     font-family: 'Noto Serif', serif;
     letter-spacing: 2px;
+
+    @include display-1024 {
+      padding: 20px 30px;
+    }
 
     .position {
 

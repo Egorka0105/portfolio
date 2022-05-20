@@ -4,15 +4,23 @@
 
 .skills {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   color: white;
+
+  @include display-960{
+    flex-direction: column;
+  }
 
   &__textContent {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 40%;
+
+    @include display-960{
+      width: 100%;
+    }
 
     .text {
       position: relative;
@@ -25,7 +33,7 @@
       }
 
       &:after {
-        @include tagAfter(10px, -10px);
+        @include tagAfter(-10%, -30px);
         content: "<p/>";
       }
     }
@@ -36,14 +44,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 50%;
+    width: 60%;
     padding: 10px;
+
+    @include display-960{
+      width: 100%;
+    }
 
     ul {
       overflow-x: hidden;
       max-width: 500px;
       width: 100%;
-      margin-top: 100px;
+      margin-top: 70px;
+      padding-bottom: 30px;
 
 
       .skillItem {
@@ -89,10 +102,20 @@
   &:before {
     @include tagBefore(200px, 40px);
     content: "<body>";
+
+    @include display-1024 {
+      top: 60px;
+      left: 20px;
+    }
   }
 
   &:after {
     @include tagAfter(200px, 40px);
     content: "<body/>";
+
+    @include display-1024 {
+      bottom: 30px;
+      left: 20px;
+    }
   }
 }

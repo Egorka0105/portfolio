@@ -2,25 +2,6 @@
 
 $mobileHeaderHeight: 40px;
 
-@mixin tagBefore($left:0,$top:0) {
-  font-family: 'La Belle Aurore', cursive;
-  color: $tagColor;
-  font-size: 18px;
-  position: absolute;
-  left: $left;
-  top: $top;
-}
-
-@mixin tagAfter($left:0,$bottom:0) {
-  font-family: 'La Belle Aurore', cursive;
-  color: $tagColor;
-  font-size: 18px;
-  position: absolute;
-  left: $left;
-  bottom: $bottom;
-}
-
-
 @mixin display-1200 {
   @media (max-width: 1200px) {
     @content
@@ -57,5 +38,21 @@ $mobileHeaderHeight: 40px;
   }
 }
 
+@mixin tagBefore($left:0,$top:0) {
+  font-family: 'La Belle Aurore', cursive;
+  color: $tagColor;
+  font-size: 18px;
+  position: absolute;
+  left: $left;
+  top: $top;
+}
 
+@mixin tagAfter($left:0,$bottom:0) {
+  font-family: 'La Belle Aurore', cursive;
+  color: $tagColor;
+  font-size: 18px;
+  position: absolute;
+  left: $left;
+  bottom: $bottom;
+}
 

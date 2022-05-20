@@ -4,11 +4,15 @@
 
 .banner {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: $bannerTextColor;
+
+  @include display-960 {
+    padding: 0 10px;
+  }
 
   &__title {
     position: relative;
@@ -17,13 +21,27 @@
     letter-spacing: 4px;
     padding: 10px;
 
+    @include display-960 {
+      padding: 0;
+      margin-left: 40px;
+    }
+
+    @include display-768 {
+      font-size: 36px;
+    }
+
+    @include display-480 {
+      margin-bottom: 40px;
+      margin-left: 30px;
+      font-size: 6vw;
+    }
 
     span {
       transition: all 0.8s ease-out;
       display: inline-block;
 
       &:hover {
-        color: aquamarine;
+        color: $bannerTitleHover;
         animation: bannerText 1s;
         transition: all 0.8s ease-out;
       }
@@ -32,11 +50,23 @@
     &:before {
       content: "<h1>";
       @include tagBefore(-10px, -20px);
+      font-size: 2vw;
+      font-weight: 500;
+
+      @include display-480 {
+        font-size: 3vw;
+      }
     }
 
     &:after {
       content: "<h1/>";
       @include tagAfter(-10px, -30px);
+      font-size: 2vw;
+      font-weight: 500;
+
+      @include display-480 {
+        font-size: 3vw;
+      }
     }
   }
 
@@ -49,14 +79,35 @@
     display: block;
     color: $bannerSubTitle;
 
+    @include display-960 {
+      margin-left: 40px;
+      margin-top: 50px;
+    }
+
+    @include display-480 {
+      padding: 0;
+      font-size: 4vw;
+      margin-left: 30px;
+    }
+
     &:before {
       content: "<p>";
       @include tagBefore(-10px, -25px);
+      font-size: 2vw;
+
+      @include display-480 {
+        font-size: 3vw;
+      }
     }
 
     &:after {
       content: "<p/>";
       @include tagAfter(-10px, -30px);
+      font-size: 2vw;
+
+      @include display-480 {
+        font-size: 3vw;
+      }
     }
   }
 
@@ -73,6 +124,15 @@
     border-radius: 4px;
     transition: 1s ease;
 
+    @include display-960 {
+      margin-left: 40px;
+      margin-top: 80px;
+    }
+
+    @include display-480 {
+      font-size: 3vw;
+    }
+
     &:hover {
       color: $bannerBtnHoverText;
       background-color: $bannerBtnHoverBackground;
@@ -82,33 +142,43 @@
     &:before {
       content: "<button>";
       @include tagBefore(-10px, -30px);
+      font-size: 2vw;
+
+      @include display-480 {
+        font-size: 3vw;
+      }
     }
 
     &:after {
       content: "<button/>";
       @include tagAfter(-10px, -40px);
+      font-size: 2vw;
+
+      @include display-480 {
+        font-size: 3vw;
+      }
     }
   }
 
-  &__canvas{
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   &:before {
-    @include tagBefore(200px,40px);
+    @include tagBefore(200px, 40px);
     content: "<body>";
+
+    @include display-1024 {
+      top: 60px;
+      left: 30px;
+    }
   }
 
   &:after {
-    @include tagAfter(200px,40px);
+    @include tagAfter(200px, 40px);
     content: "<body/>";
-  }
 
+    @include display-1024 {
+      bottom: 20px;
+      left: 30px;
+    }
+  }
 }
 
 

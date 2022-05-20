@@ -3,7 +3,6 @@ import Menu from "./Components/Header/Menu";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
 import Skills from "./Components/Skills/Skills";
-import Works from "./Components/Works/Works";
 import {Route, Routes} from "react-router-dom";
 import Banner from "./Components/Banner/Banner";
 import MobileBtn from "./Components/Header/MobileBtn/MobileBtn";
@@ -23,7 +22,6 @@ function App() {
                     <Route path={''} element={<Banner/>}/>
                     <Route path={'about'} element={<About/>}/>
                     <Route path={'skills'} element={<Skills/>}/>
-                    <Route path={'works'} element={<Works/>}/>
                     <Route path={'contact'} element={<Contact/>}/>
                 </Routes>
             </main>

@@ -16,9 +16,6 @@ const NavBar = () => {
             <NavLink onClick={() => dispatch(changeMobileIsOpen())} className={clN.navBar__item} to={"skills"}>
                 Skills
             </NavLink>
-            <NavLink onClick={() => dispatch(changeMobileIsOpen())} className={clN.navBar__item} to={"works"}>
-                Works
-            </NavLink>
             <NavLink onClick={() => dispatch(changeMobileIsOpen())} className={clN.navBar__item} to={"contact"}>
                 Contact
             </NavLink>
