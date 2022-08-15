@@ -9,6 +9,7 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 export interface IInitialState {
     skills: ISkills;
     mobileIsOpen: boolean;
+    formClickSend: boolean;
 }
 
 export interface ISkills {

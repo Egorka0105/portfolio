@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {FC, useMemo} from 'react';
 import clN from "./contact.module.scss"
 import Form from "./Form/Form";
 import ModalWindowNavAnimation from "../ModalWindowNavAnimation/ModalWindowNavAnimation";
+import {useAppSelector} from "core/interfaces";
+import PhoneComponent from "../PhoneComponent/PhoneComponent";
 
-const Contact = () => {
+const Contact: FC = () => {
+
+    const checkClickForm = useAppSelector(state => state.portfolio.formClickSend);
+
     return (
         <>
             <ModalWindowNavAnimation/>
@@ -11,9 +16,14 @@ const Contact = () => {
 
                 <div className={clN.formWrapper}>
                     <h2 className={clN.title}>Contact me</h2>
-                    <p className={clN.subTitle}>If you have any questions or suggestions, feel free to fill out the
-                        form.</p>
-                    <Form/>
+
+                    <p className={clN.subTitle}>
+                        {checkClickForm && "Maybe call???"}
+                        {!checkClickForm && "If you have any questions or suggestions, feel free to fill out the form."}
+                    </p>
+
+                    {!checkClickForm && <Form/>}
+                    {checkClickForm && <PhoneComponent/>}
                 </div>
 
                 <iframe

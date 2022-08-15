@@ -7,6 +7,8 @@ const initialState: IInitialState = {
 
     skills: content.skills,
     mobileIsOpen: false,
+    formClickSend: false,
+
 }
 
 const myPortfolio = createSlice({
@@ -15,10 +17,14 @@ const myPortfolio = createSlice({
     reducers: {
         changeMobileIsOpen(state) {
             state.mobileIsOpen = !state.mobileIsOpen
+        },
+        changeFormClickSend(state, action:PayloadAction<boolean>) {
+            state.formClickSend = action.payload;
         }
+
 
     }
 })
 
-export const {changeMobileIsOpen} = myPortfolio.actions;
+export const {changeMobileIsOpen, changeFormClickSend} = myPortfolio.actions;
 export default myPortfolio.reducer;

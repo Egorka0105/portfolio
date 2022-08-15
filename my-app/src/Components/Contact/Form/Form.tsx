@@ -1,32 +1,46 @@
 import React, {FC, FormEvent, useState, memo} from 'react';
 import clN from "./form.module.scss";
+import {useAppDispatch} from "core/interfaces";
+import {changeFormClickSend} from "store/portfolioSlice"
 
 const Form: FC = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const dispatch = useAppDispatch();
+
     const handlerSubmit = (e: FormEvent) => {
         e.preventDefault();
-
+        dispatch(changeFormClickSend(true));
     }
 
-
     return (
-        <form className={clN.form}>
-
-            <input onChange={(e) => {
-                setName(e.target.value)
-            }} className={clN.name} type={"text"} required={true} placeholder={'Name'}/>
-            <input onChange={(e) => {
-                setEmail(e.target.value)
-            }} className={clN.email} type={"email"} required={true} placeholder={'Email'} pattern={"/^[a-zA-Z0-9\d]/"}/>
-            <textarea onChange={(e) => {
-                setMessage(e.target.value)
-            }} className={clN.message} required={true} placeholder={"Message"}/>
-            <button onSubmit={handlerSubmit} className={clN.submit} type={"submit"}>Send</button>
+        <form onSubmit={handlerSubmit} className={clN.form}>
+            <input
+                value={name}
+                onChange={(e) => {setName(e.target.value)}}
+                className={clN.name}
+                type={"text"}
+                placeholder={'Name'}
+            />
+            <input
+                value={email}
+                onChange={(e) => {setEmail(e.target.value)}}
+                className={clN.email}
+                type={"email"}
+                placeholder={'Email'}
+            />
+            <textarea
+                value={message}
+                onChange={(e) => {setMessage(e.target.value)}}
+                className={clN.message}
+                placeholder={"Message"}
+            />
+            <button className={clN.submit} type={"submit"}>
+                Send
+            </button>
         </form>
     );
 };
-
 export default memo(Form);

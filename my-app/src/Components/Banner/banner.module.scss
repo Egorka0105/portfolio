@@ -50,7 +50,7 @@
     &:before {
       content: "<h1>";
       @include tagBefore(-10px, -20px);
-      font-size: 2vw;
+      font-size: 16px;
       font-weight: 500;
 
       @include display-480 {
@@ -61,7 +61,7 @@
     &:after {
       content: "<h1/>";
       @include tagAfter(-10px, -30px);
-      font-size: 2vw;
+      font-size: 16px;
       font-weight: 500;
 
       @include display-480 {
@@ -93,7 +93,7 @@
     &:before {
       content: "<p>";
       @include tagBefore(-10px, -25px);
-      font-size: 2vw;
+      font-size: 16px;
 
       @include display-480 {
         font-size: 3vw;
@@ -103,7 +103,7 @@
     &:after {
       content: "<p/>";
       @include tagAfter(-10px, -30px);
-      font-size: 2vw;
+      font-size: 16px;
 
       @include display-480 {
         font-size: 3vw;
@@ -142,7 +142,7 @@
     &:before {
       content: "<button>";
       @include tagBefore(-10px, -30px);
-      font-size: 2vw;
+      font-size: 16px;
 
       @include display-480 {
         font-size: 3vw;
@@ -152,7 +152,7 @@
     &:after {
       content: "<button/>";
       @include tagAfter(-10px, -40px);
-      font-size: 2vw;
+      font-size: 16px;
 
       @include display-480 {
         font-size: 3vw;

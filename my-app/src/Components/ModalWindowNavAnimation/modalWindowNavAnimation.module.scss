@@ -12,6 +12,11 @@
   animation-fill-mode: forwards;
   background-color: $main-background;
   z-index: 11;
+
+  @include display-1024{
+    height: 100%;
+    z-index: 99;
+  }
 }
 
 .windowNavAnimation {
