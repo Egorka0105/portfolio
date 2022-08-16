@@ -1,4 +1,7 @@
 {
+  "banner": {
+    "title": [["Hi,"], "br", ["I’m Ihor Dudkevych"], "br", ["Web developer"]]
+  },
   "menu": {
     "navBar": {
       "navBarList": [

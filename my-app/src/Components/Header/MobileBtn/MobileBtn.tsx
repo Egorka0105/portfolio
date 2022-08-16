@@ -1,20 +1,18 @@
 import React from 'react';
-import clN from "./mobileBtn.module.scss"
-import {useAppDispatch} from "core/interfaces";
-import {changeMobileIsOpen} from "store/portfolioSlice";
-
+import { useAppDispatch } from 'core/interfaces';
+import { changeMobileIsOpen } from 'store/portfolioSlice';
+import clN from './mobileBtn.module.scss';
 
 const MobileBtn = () => {
-    const dispatch = useAppDispatch();
+	const dispatch = useAppDispatch();
 
-
-    return (
-        <div className={clN.mobileMenu}>
-            <div onClick={() => dispatch(changeMobileIsOpen())} className={clN.mobileBtn}>
-                <span className={clN.mobileBtn__line}/>
-            </div>
-        </div>
-    );
+	return (
+		<div className={clN.mobileMenu}>
+			<button type="button" onClick={() => dispatch(changeMobileIsOpen())} className={clN.mobileBtn}>
+				<span className={clN.mobileBtn__line} />
+			</button>
+		</div>
+	);
 };
 
 export default MobileBtn;

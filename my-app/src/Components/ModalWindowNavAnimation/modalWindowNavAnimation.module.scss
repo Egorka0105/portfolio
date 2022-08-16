@@ -13,7 +13,7 @@
   background-color: $main-background;
   z-index: 11;
 
-  @include display-1024{
+  @include display-1024 {
     height: 100%;
     z-index: 99;
   }
@@ -37,7 +37,6 @@
     width: 100%;
   }
 
-
   &__img {
     width: 50%;
     height: auto;
@@ -47,7 +46,6 @@
     & > img {
       width: 100%;
     }
-
 
     &:before {
       content: "";
@@ -59,7 +57,6 @@
       z-index: 6;
       animation: waiting .8s ease-in-out .8s;
       border-radius: 4px;
-
     }
   }
 }

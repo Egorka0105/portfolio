@@ -19,7 +19,6 @@
   animation: headerView 1s ease-in-out;
   animation-fill-mode: forwards;
 
-
   @include display-1024 {
     left: -100%;
     transition: .2s ease-in-out;

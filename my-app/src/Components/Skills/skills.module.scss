@@ -8,7 +8,7 @@
   display: flex;
   color: white;
 
-  @include display-960{
+  @include display-960 {
     flex-direction: column;
     height: 100%;
     padding-bottom: 100px;
@@ -21,7 +21,7 @@
     width: 40%;
 
 
-    @include display-960{
+    @include display-960 {
       width: 100%;
       margin-top: 130px;
     }
@@ -33,16 +33,16 @@
       line-height: 28px;
       padding-left: 30px;
 
-      @include display-1200{
+      @include display-1200 {
         font-size: 19px;
       }
 
-      @include display-960{
+      @include display-960 {
         padding-left: 100px;
         padding-right: 50px;
       }
 
-      @include display-480{
+      @include display-480 {
         font-size: 14px;
         padding-left: 60px;
         padding-right: 40px;
@@ -69,7 +69,7 @@
     width: 60%;
     padding: 10px;
 
-    @include display-960{
+    @include display-960 {
       width: 100%;
     }
 
@@ -80,7 +80,7 @@
       margin-top: 70px;
       padding-bottom: 30px;
 
-      @include display-768{
+      @include display-768 {
         padding: 0 30px 30px 30px;
       }
 
@@ -92,7 +92,7 @@
         transform: translateX(-120%);
         animation-fill-mode: forwards;
 
-        &__levelLine{
+        &__levelLine {
           display: block;
           position: absolute;
           bottom: 0;

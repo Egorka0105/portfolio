@@ -1,16 +1,16 @@
 import React from 'react';
-import clN from "./menu.module.scss"
 // @ts-ignore
-import CV from "assets/Ihor_Dudkevych.pdf"
+import CV from 'assets/Ihor_Dudkevych.pdf';
+import clN from './menu.module.scss';
 
 const CvLink = () => {
-    return (
-        <div className={clN.downloadCV}>
-            <a  href={CV} download={true}>
-                Download CV
-            </a>
-        </div>
-    );
+	return (
+		<div className={clN.downloadCV}>
+			<a href={CV} download>
+				Download CV
+			</a>
+		</div>
+	);
 };
 
 export default CvLink;
