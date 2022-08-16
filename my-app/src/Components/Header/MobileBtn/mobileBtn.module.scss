@@ -13,6 +13,7 @@
   justify-content: flex-end;
   align-items: center;
   padding-right: 30px;
+  z-index: 3;
 
   @include display-1024 {
     display: flex;

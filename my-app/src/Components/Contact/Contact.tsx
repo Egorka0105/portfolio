@@ -3,10 +3,10 @@ import { useAppSelector } from 'core/interfaces';
 import clN from './contact.module.scss';
 import Form from './Form/Form';
 import ModalWindowNavAnimation from '../ModalWindowNavAnimation/ModalWindowNavAnimation';
-import PhoneComponent from '../PhoneComponent/PhoneComponent';
+import Phone from '../Phone/Phone';
 
 const Contact: FC = () => {
-	const checkClickForm = useAppSelector(state => state.portfolio.formClickSend);
+	const checkClickForm = useAppSelector(state => state.portfolio.contactIsOpen);
 
 	return (
 		<>
@@ -21,7 +21,7 @@ const Contact: FC = () => {
 					</p>
 
 					{!checkClickForm && <Form />}
-					{checkClickForm && <PhoneComponent />}
+					{checkClickForm && <Phone />}
 				</div>
 
 				<iframe

@@ -112,54 +112,50 @@
     }
   }
 
-  &__btnContact {
+  &__contact {
     position: relative;
     margin-left: 100px;
     margin-top: 80px;
-    letter-spacing: 4px;
-    width: fit-content;
-    padding: 10px 20px;
-    background-color: $bannerBtnBackground;
-    color: $bannerBtnText;
-    border: 1px solid $bannerBtnBorder;
-    border-radius: 4px;
-    transition: 1s ease;
+    display: flex;
 
     @include display-960 {
       margin-left: 40px;
-      margin-top: 80px;
     }
 
     @include display-480 {
-      font-size: 3vw;
+      margin-left: 20px;
+      letter-spacing: 2px;
     }
 
-    &:hover {
-      color: $bannerBtnHoverText;
-      background-color: $bannerBtnHoverBackground;
-      transition: 1s ease;
-    }
-
-    &:before {
-      content: "<button>";
-      @include tagBefore(-10px, -30px);
-      font-size: 16px;
+    .btn {
 
       @include display-480 {
         font-size: 3vw;
+        letter-spacing: 2px;
       }
-    }
 
-    &:after {
-      content: "<button/>";
-      @include tagAfter(-10px, -40px);
-      font-size: 16px;
+      &:before {
+        content: "<button>";
+        @include tagBefore(-10px, -30px);
+        font-size: 16px;
 
-      @include display-480 {
-        font-size: 3vw;
+        @include display-480 {
+          font-size: 3vw;
+        }
+      }
+
+      &:after {
+        content: "<button/>";
+        @include tagAfter(-10px, -40px);
+        font-size: 16px;
+
+        @include display-480 {
+          font-size: 3vw;
+        }
       }
     }
   }
+
 
   &:before {
     @include tagBefore(200px, 40px);

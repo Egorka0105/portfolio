@@ -5,7 +5,7 @@ import { IInitialState } from '../core/interfaces';
 const initialState: IInitialState = {
 	skills: content.skills,
 	mobileIsOpen: false,
-	formClickSend: false,
+	contactIsOpen: false,
 };
 
 const myPortfolio = createSlice({
@@ -15,11 +15,11 @@ const myPortfolio = createSlice({
 		changeMobileIsOpen(state) {
 			state.mobileIsOpen = !state.mobileIsOpen;
 		},
-		changeFormClickSend(state, action: PayloadAction<boolean>) {
-			state.formClickSend = action.payload;
+		checkContactClick(state, action: PayloadAction<boolean>) {
+			state.contactIsOpen = action.payload;
 		},
 	},
 });
 
-export const { changeMobileIsOpen, changeFormClickSend } = myPortfolio.actions;
+export const { changeMobileIsOpen, checkContactClick } = myPortfolio.actions;
 export default myPortfolio.reducer;

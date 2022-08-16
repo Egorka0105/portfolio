@@ -28,7 +28,7 @@ export interface ISkills {
 export interface IInitialState {
 	skills: ISkills;
 	mobileIsOpen: boolean;
-	formClickSend: boolean;
+	contactIsOpen: boolean;
 }
 
 export type BannerTitleElement = string[] | string;
