@@ -1,25 +1,36 @@
 {
   "banner": {
-    "title": [["Hi,"], "br", ["I’m Ihor Dudkevych"], "br", ["Web developer"]]
+    "title": [
+      [
+        "Hi,"
+      ],
+      "br",
+      [
+        "I’m Ihor Dudkevych"
+      ],
+      "br",
+      [
+        "Web developer"
+      ]
+    ]
   },
   "menu": {
     "navBar": {
       "navBarList": [
         {
           "name": "About",
-          "path": "about"
+          "path": "about",
+          "key": "about00"
         },
         {
           "name": "Skills",
-          "path": "skills"
+          "path": "skills",
+          "key": "skills01"
         },
         {
-          "name": "Works",
-          "path": "works"
-        },
-        {
-          "name": "Contact",
-          "path": "contact"
+          "name": "Experience",
+          "path": "experience",
+          "key": "experience02"
         }
       ],
       "key": ""
@@ -30,8 +41,10 @@
     "linkedin": "https://www.linkedin.com/in/ihor-dudkevich-2384391b3/",
     "gitHub": "https://github.com/Egorka0105"
   },
+  "about": {
+    "textAboutMe": "I am a stubborn and motivated to develop my skills and abilities to grow professionally. Highly responsible individual with strong analytical skills and desire to work. I am ready to take new challenges, not afraid to learn, improve and get new knowledge. I have sound knowledge of HTML, CSS, JavaScript. Look forward to improving my skills and becoming a part of a professional team."
+  },
   "skills": {
-    "textAboutSkills": "I am a stubborn and motivated to develop my skills and abilities to grow professionally. Highly responsible individual with strong analytical skills and desire to work. I am ready to take new challenges, not afraid to learn, improve and get new knowledge. I have sound knowledge of HTML, CSS, JavaScript. Look forward to improving my skills and becoming a part of a professional team.",
     "allSkillsMap": [
       {
         "key": "htmlItem01",
@@ -69,12 +82,46 @@
         "levelPercent": "40"
       },
       {
-        "key": "typeScriptItem08",
+        "key": "reduxSagaItem08",
+        "name": "Redux-Saga",
+        "levelPercent": "40"
+      },
+      {
+        "key": "typeScriptItem09",
         "name": "TypeScript",
         "levelPercent": "40"
       }
     ],
-    "experience": [
+    "icons": [
+      {
+        "key": "figma00",
+        "path": "static/media/figma.72ff35026c53ba574aef54c980db0e8d.svg",
+        "alt": "figma"
+      },
+      {
+        "key": "jira01",
+        "path": "static/media/jira.1b79d9d02350c124716652a3e72b8376.svg",
+        "alt": "jira"
+      },
+      {
+        "key": "confluence02",
+        "path": "static/media/confluence.0e202a3d3c7c039a598c4649b32b2b84.svg",
+        "alt": "confluence"
+      },
+      {
+        "key": "webstorm03",
+        "path": "static/media/webstorm.9970a063f9d004db54f1db27ce1b1a96.svg",
+        "alt": "webstorm"
+      },
+      {
+        "key": "windows04",
+        "path": "static/media/windows.4b4849633a68ebb30496631c9c452eeb.svg",
+        "alt": "windows"
+      }
+    ]
+  },
+  "experience": {
+    "jobs": [
       {
         "key": "job01",
         "companyName": "DevOcean",
@@ -90,6 +137,22 @@
         "dayFinish": "Present time",
         "location": "Vinnitsa",
         "position": "Front-end Developer"
+      }
+    ],
+    "projects": [
+      {
+        "key": "project00",
+        "name": "First project",
+        "role": "Front-end developer",
+        "tools": "HTML5, Scss, JS, React, Redux, Formik.",
+        "responsibilities": "Create a new input fields, update styles, error correction."
+      },
+      {
+        "key": "project01",
+        "name": "Second project",
+        "role": "Front-end developer",
+        "tools": "HTML5, Styled-Components, JS, React, Redux-Saga.",
+        "responsibilities": "I develop the general appearance and design elements of the site, develop new features (new forms, pages, etc.), correct any site problems or bugs that arise, including functional changes, responsive design, etc."
       }
     ]
   }

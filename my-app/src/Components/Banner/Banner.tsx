@@ -1,18 +1,17 @@
 import React from 'react';
 import content from 'core/content.json';
 import cn from 'classnames';
-import clN from './banner.module.scss';
+import { useAppDispatch, useAppSelector } from 'core/interfaces';
+import { bannerTitleCreate } from 'core/functions';
+import { checkContactClick } from 'store/portfolioSlice';
+import Phone from './Phone/Phone';
 import ModalWindowNavAnimation from '../ModalWindowNavAnimation/ModalWindowNavAnimation';
-import { bannerTitleCreate } from '../../core/functions';
-import Phone from '../Phone/Phone';
-import { useAppDispatch, useAppSelector } from '../../core/interfaces';
-import { checkContactClick } from '../../store/portfolioSlice';
+import clN from './banner.module.scss';
 
 const Banner = () => {
 	const btnIsOpen = useAppSelector(state => state.portfolio.contactIsOpen);
 	const dispatch = useAppDispatch();
-	const { title } = content.banner;
-	const bannerTitle = bannerTitleCreate(title);
+	const bannerTitle = bannerTitleCreate(content.banner.title);
 	return (
 		<>
 			<ModalWindowNavAnimation />

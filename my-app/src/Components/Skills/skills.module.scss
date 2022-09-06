@@ -3,9 +3,10 @@
 @import "src/assets/css/animations";
 
 .skills {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  display: flex;
   color: white;
 
   @include display-960 {
@@ -145,3 +146,5 @@
     }
   }
 }
+
+

@@ -1,16 +1,12 @@
 import React, { FC } from 'react';
 import clN from './skills.module.scss';
+import { ISkill } from '../../core/interfaces';
 
-type Props = {
-	name: string;
-	level: string;
-};
-
-const ItemSkill: FC<Props> = ({ name, level }) => {
+const ItemSkill: FC<ISkill> = ({ name, levelPercent }) => {
 	return (
 		<li className={clN.skillItem}>
 			{name}
-			<span style={{ maxWidth: `${level}%` }} className={clN.skillItem__levelLine} />
+			<span style={{ maxWidth: `${levelPercent}%` }} className={clN.skillItem__levelLine} />
 		</li>
 	);
 };

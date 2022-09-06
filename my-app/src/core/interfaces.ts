@@ -19,14 +19,7 @@ export interface IExperienceItem {
 	position: string;
 }
 
-export interface ISkills {
-	textAboutSkills: string;
-	allSkillsMap: ISkill[];
-	experience: IExperienceItem[];
-}
-
 export interface IInitialState {
-	skills: ISkills;
 	mobileIsOpen: boolean;
 	contactIsOpen: boolean;
 }

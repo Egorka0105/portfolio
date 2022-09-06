@@ -5,12 +5,33 @@
 .about {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   color: white;
   min-height: 100vh;
 
-  .title {
+  &__text-block {
+    max-width: 50%;
 
+    .text {
+      position: relative;
+      line-height: 25px;
+
+      &:before {
+        content: "<p>";
+        @include tagBefore(-20px, -20px);
+      }
+      &:after{
+        content: "<p/>";
+        @include tagAfter(-20px, -30px);
+      }
+    }
+
+  }
+
+  &__img-block {
+    .portrait {
+      animation: portrait 1.5s ease-in-out forwards 1.8s;
+    }
   }
 
 

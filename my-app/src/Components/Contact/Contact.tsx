@@ -3,7 +3,7 @@ import { useAppSelector } from 'core/interfaces';
 import clN from './contact.module.scss';
 import Form from './Form/Form';
 import ModalWindowNavAnimation from '../ModalWindowNavAnimation/ModalWindowNavAnimation';
-import Phone from '../Phone/Phone';
+import Phone from '../Banner/Phone/Phone';
 
 const Contact: FC = () => {
 	const checkClickForm = useAppSelector(state => state.portfolio.contactIsOpen);

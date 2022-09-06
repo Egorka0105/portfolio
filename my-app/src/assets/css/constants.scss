@@ -24,3 +24,19 @@
     color: $bannerBtnHoverText;
   }
 }
+
+.defaultText{
+  font-family: 'Noto Serif', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+.slide-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .toolsItem {
+    max-width: 100px;
+  }
+}

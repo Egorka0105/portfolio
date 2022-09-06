@@ -1,9 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import content from 'core/content.json';
 import { IInitialState } from '../core/interfaces';
 
 const initialState: IInitialState = {
-	skills: content.skills,
 	mobileIsOpen: false,
 	contactIsOpen: false,
 };
