@@ -24,5 +24,11 @@ export interface IInitialState {
 	contactIsOpen: boolean;
 }
 
+export interface IToolsIcon {
+	key: string;
+	element: string;
+	alt: string;
+}
+
 export type BannerTitleElement = string[] | string;
 export type BannerTitle = BannerTitleElement[];

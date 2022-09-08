@@ -1,7 +1,7 @@
 import React from 'react';
 // @ts-ignore
 import CV from 'assets/Ihor_Dudkevych.pdf';
-import clN from './menu.module.scss';
+import clN from './header.module.scss';
 
 const CvLink = () => {
 	return (

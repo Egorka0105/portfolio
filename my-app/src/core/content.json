@@ -91,33 +91,6 @@
         "name": "TypeScript",
         "levelPercent": "40"
       }
-    ],
-    "icons": [
-      {
-        "key": "figma00",
-        "path": "static/media/figma.72ff35026c53ba574aef54c980db0e8d.svg",
-        "alt": "figma"
-      },
-      {
-        "key": "jira01",
-        "path": "static/media/jira.1b79d9d02350c124716652a3e72b8376.svg",
-        "alt": "jira"
-      },
-      {
-        "key": "confluence02",
-        "path": "static/media/confluence.0e202a3d3c7c039a598c4649b32b2b84.svg",
-        "alt": "confluence"
-      },
-      {
-        "key": "webstorm03",
-        "path": "static/media/webstorm.9970a063f9d004db54f1db27ce1b1a96.svg",
-        "alt": "webstorm"
-      },
-      {
-        "key": "windows04",
-        "path": "static/media/windows.4b4849633a68ebb30496631c9c452eeb.svg",
-        "alt": "windows"
-      }
     ]
   },
   "experience": {

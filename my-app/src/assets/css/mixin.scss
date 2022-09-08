@@ -1,6 +1,8 @@
 @import "src/assets/css/colors";
 
-$mobileHeaderHeight: 40px;
+
+$mobileBtnLineWidthClose: 35px;
+$mobileBtnLineWidthOpen: 8px;
 
 @mixin display-1200 {
   @media (max-width: 1200px) {

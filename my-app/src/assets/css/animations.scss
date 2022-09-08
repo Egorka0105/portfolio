@@ -1,3 +1,5 @@
+@import "mixin";
+
 @keyframes bannerText {
   0% {
     transform: scale3d(1, 1, 1);
@@ -102,10 +104,117 @@
 // about
 
 @keyframes portrait {
-  0%{
+  0% {
     clip-path: ellipse(1% 1% at 50% 50%);
   }
   100% {
     clip-path: ellipse(49% 41% at 50% 50%);
+  }
+}
+
+// mobile btn animations
+
+@keyframes stick-1-open {
+  0% {
+    width: $mobileBtnLineWidthClose;
+  }
+  40% {
+    background-color: #ff1456;
+    width: $mobileBtnLineWidthOpen;
+    transform: translate(40px, 0);
+  }
+  75%, 80% {
+    width: $mobileBtnLineWidthOpen;
+    transform: translate(40px, -50px);
+    animation-timing-function: cubic-bezier(0, 1, 1, 1);
+  }
+  100% {
+    background-color: #ff1456;
+    width: 0;
+    transform: translate(35px, 46px);
+    display: none;
+  }
+}
+
+@keyframes stick-2-open {
+  80% {
+    background-color: #2DFDB9;
+    transform: translate(0, 0) rotate(0);
+  }
+  100% {
+    background-color: #ff1456;
+    transform: translate(1px, 1px) rotate(40deg);
+  }
+}
+
+@keyframes stick-3-open {
+  80% {
+    background-color: #2DFDB9;
+    transform: translate(0, 0px) rotate(0);
+  }
+  100% {
+    background-color: #ff1456;
+    transform: translate(0px, -7px) rotate(-40deg);
+  }
+}
+
+@keyframes stick-1-close {
+  0%, 70% {
+    width: 0;
+  }
+  100% {
+    width: $mobileBtnLineWidthClose;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes stick-2-close {
+  0% {
+    background-color: #ff1456;
+    width: 0;
+  }
+  20% {
+    background-color: #ff1456;
+    transform: translate(0, 0) rotate(40deg);
+  }
+  40% {
+    background-color: #2DFDB9;
+  }
+  65% {
+    transform: translate(0, -70px);
+    animation-timing-function: cubic-bezier(0, 1, 1, 1);
+  }
+  80% {
+    width: 0;
+  }
+  100% {
+    width: $mobileBtnLineWidthClose;
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes stick-3-close {
+  0% {
+    background-color: #ff1456;
+    width: 0;
+  }
+  20% {
+    background-color: #ff1456;
+    width: 0;
+    transform: translate(0, -23px) rotate(-40deg);
+  }
+  40% {
+    background-color: #2DFDB9;
+  }
+  65% {
+    transform: translate(0, -93px);
+    animation-timing-function: cubic-bezier(0, 1, 1, 1);
+  }
+  90% {
+    width: $mobileBtnLineWidthOpen;
+  }
+  100% {
+    width: $mobileBtnLineWidthClose;
+    transform: translate(0, 0);
   }
 }

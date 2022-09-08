@@ -1,17 +1,17 @@
 import React from 'react';
 import cn from 'classnames';
 import { useAppSelector } from 'core/interfaces';
-import clN from './menu.module.scss';
-import Logo from './Logo/Logo';
-import Links from './Links/Links';
-import NavBar from './NavBar/NavBar';
+import clN from './header.module.scss';
+import Logo from './Logo';
+import NavBar from './NavBar';
+import Links from './Links';
 import CvLink from './CVLink';
 
-const Menu = () => {
+const Header = () => {
 	const isMobileMenuOpen = useAppSelector(state => state.portfolio.mobileIsOpen);
 
 	return (
-		<aside className={cn(clN.menu, { [clN.open]: isMobileMenuOpen === true })}>
+		<aside className={cn(clN.header, { [clN.open]: isMobileMenuOpen === true })}>
 			<Logo />
 			<NavBar />
 			<Links />
@@ -20,4 +20,4 @@ const Menu = () => {
 	);
 };
 
-export default Menu;
+export default Header;

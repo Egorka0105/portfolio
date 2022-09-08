@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useAppDispatch } from 'core/interfaces';
 import content from 'core/content.json';
 import { changeMobileIsOpen } from 'store/portfolioSlice';
-import clN from './navBar.module.scss';
+import clN from './header.module.scss';
 
 const NavBar = () => {
 	const dispatch = useAppDispatch();

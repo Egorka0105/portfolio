@@ -3,7 +3,7 @@ import jsonLinks from 'core/content.json';
 import telegram from 'assets/img/telegram.svg';
 import linkedin from 'assets/img/linkedin.svg';
 import gitHub from 'assets/img/gitHub.svg';
-import clN from './links.module.scss';
+import clN from './header.module.scss';
 
 const Links: FC = () => {
 	return (

@@ -55,6 +55,11 @@ input, textarea {
   }
 }
 
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
 .main {
   position: relative;
   width: 100%;
@@ -83,17 +88,16 @@ input, textarea {
 
   &:before {
     content: "<html>";
-    @include tagBefore(160px, 10px);
+    @include tagBefore(160px, 0px);
 
     @include display-1024 {
       left: 0;
-      top: $mobileHeaderHeight;
     }
   }
 
   &:after {
     content: "<html/>";
-    @include tagAfter(160px, 10px);
+    @include tagAfter(160px, 0px);
 
     @include display-1024 {
       left: 0;

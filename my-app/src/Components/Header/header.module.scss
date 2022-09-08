@@ -1,0 +1,91 @@
+@import "src/assets/css/colors";
+@import "src/assets/css/animations";
+@import "src/assets/css/mixin";
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100vh;
+  background-color: $headerBackground;
+  border-right: 1px solid $header-border;
+  z-index: 99;
+  overflow: hidden auto;
+  animation: headerView 1s ease-in-out;
+  animation-fill-mode: forwards;
+
+  @include display-1024 {
+    left: -100%;
+    transition: .2s ease-in-out;
+
+    &.open {
+      left: 0;
+      transition: .2s ease-in-out;
+    }
+  }
+
+  // navBar style
+  .navBar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    border-top: 1px solid $header-border;
+
+    &__item {
+      text-align: center;
+      padding: 20px 10px;
+      border-bottom: 1px solid $header-border;
+      width: 100%;
+      color: $nav-bar;
+    }
+  }
+
+  // top logo style
+  .logoBlock {
+    color: $logo-text;
+
+    h2 {
+      font-family: 'Lobster', cursive;
+      font-size: 90px;
+
+      .letter {
+
+      }
+    }
+
+    .job {
+
+    }
+  }
+
+  // icon links style
+  .links{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
+
+  // CV button
+  .downloadCV {
+   align-self: flex-end;
+    bottom: 20px;
+    margin: 30px auto 70px auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid $AllTextColor;
+    padding: 10px;
+
+    & > a {
+      color: $AllTextColor;
+    }
+  }
+}
