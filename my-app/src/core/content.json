@@ -42,7 +42,8 @@
     "gitHub": "https://github.com/Egorka0105"
   },
   "about": {
-    "textAboutMe": "I am a stubborn and motivated to develop my skills and abilities to grow professionally. Highly responsible individual with strong analytical skills and desire to work. I am ready to take new challenges, not afraid to learn, improve and get new knowledge. I have sound knowledge of HTML, CSS, JavaScript. Look forward to improving my skills and becoming a part of a professional team."
+    "hobby": ["PC gaming","Tennis", "Basketball", "Reading Books"],
+    "textAboutMe": "I am a stubborn and motivated to develop my skills and abilities to grow professionally. Highly responsible individual with strong analytical skills. I am ready to take new challenges, not afraid to learn, improve and get new knowledge. I have sound knowledge of HTML, CSS, JavaScript. Look forward to improving my skills."
   },
   "skills": {
     "allSkillsMap": [
