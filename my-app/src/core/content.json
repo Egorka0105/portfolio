@@ -50,47 +50,47 @@
       {
         "key": "htmlItem01",
         "name": "HTML",
-        "levelPercent": "80"
+        "levelPercent": "90"
       },
       {
         "key": "cssItem02",
         "name": "CSS",
-        "levelPercent": "80"
+        "levelPercent": "90"
       },
       {
         "key": "scssItem03",
         "name": "Scss",
-        "levelPercent": "80"
+        "levelPercent": "90"
       },
       {
         "key": "jsItem04",
         "name": "Js",
-        "levelPercent": "60"
+        "levelPercent": "80"
       },
       {
         "key": "gitItem05",
         "name": "Git",
-        "levelPercent": "50"
+        "levelPercent": "70"
       },
       {
         "key": "reactItem06",
         "name": "React",
-        "levelPercent": "50"
+        "levelPercent": "70"
       },
       {
         "key": "reduxToolkitItem07",
         "name": "Redux-Toolkit",
-        "levelPercent": "40"
+        "levelPercent": "60"
       },
       {
         "key": "reduxSagaItem08",
         "name": "Redux-Saga",
-        "levelPercent": "40"
+        "levelPercent": "60"
       },
       {
         "key": "typeScriptItem09",
         "name": "TypeScript",
-        "levelPercent": "40"
+        "levelPercent": "50"
       }
     ]
   },

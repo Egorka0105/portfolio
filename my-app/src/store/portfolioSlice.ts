@@ -13,11 +13,8 @@ const myPortfolio = createSlice({
 		changeMobileIsOpen(state) {
 			state.mobileIsOpen = !state.mobileIsOpen;
 		},
-		checkContactClick(state) {
-			state.contactIsOpen = !state.mobileIsOpen;
-		},
 	},
 });
 
-export const { changeMobileIsOpen, checkContactClick } = myPortfolio.actions;
+export const { changeMobileIsOpen } = myPortfolio.actions;
 export default myPortfolio.reducer;

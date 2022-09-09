@@ -6,11 +6,14 @@ import webstorm from 'assets/img/webstorm.svg';
 import windows from 'assets/img/windows.svg';
 import figma from 'assets/img/figma.svg';
 import confluence from 'assets/img/confluence.svg';
+import 'assets/css/mixin.scss';
 import 'swiper/css';
+import clN from './skills.module.scss';
 
 const Slider: FC = () => {
 	return (
-		<div>
+		<div className={clN.toolsSlider}>
+			<h2 className={clN.title}>Tools</h2>
 			<Swiper
 				modules={[Navigation, Pagination, Scrollbar, A11y]}
 				spaceBetween={50}
@@ -19,6 +22,17 @@ const Slider: FC = () => {
 				navigation
 				scrollbar={{ draggable: true }}
 				onSwiper={swiper => swiper}
+				breakpoints={{
+					100: {
+						slidesPerView: 2,
+					},
+					480: {
+						slidesPerView: 3,
+					},
+					1024: {
+						slidesPerView: 4,
+					},
+				}}
 			>
 				<SwiperSlide className="slide-wrapper">
 					<img className="toolsItem" alt="jira" src={jira} />
