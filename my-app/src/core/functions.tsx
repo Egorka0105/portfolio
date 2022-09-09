@@ -1,5 +1,6 @@
 import { BannerTitle } from 'core/interfaces';
 import React from 'react';
+import { nanoid } from '@reduxjs/toolkit';
 
 export const bannerTitleCreate = (title: BannerTitle): React.ReactNode => {
 	return title.map(el => {
@@ -11,7 +12,7 @@ export const bannerTitleCreate = (title: BannerTitle): React.ReactNode => {
 			});
 		}
 		if (el === 'br') {
-			return <br />;
+			return <br key={nanoid()} />;
 		}
 		return el;
 	});

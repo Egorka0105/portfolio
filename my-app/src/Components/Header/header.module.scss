@@ -2,7 +2,6 @@
 @import "src/assets/css/animations";
 @import "src/assets/css/mixin";
 
-
 .header {
   display: flex;
   flex-direction: column;
@@ -14,18 +13,18 @@
   height: 100vh;
   background-color: $headerBackground;
   border-right: 1px solid $header-border;
-  z-index: 99;
+  z-index: $headerZ-index;
   overflow: hidden auto;
-  animation: headerView 1s ease-in-out;
+  animation: headerView $speedHeaderOpen ease-in-out;
   animation-fill-mode: forwards;
 
   @include display-1024 {
     left: -100%;
-    transition: .2s ease-in-out;
+    transition: $speedHeaderOpen ease-in-out;
 
     &.open {
       left: 0;
-      transition: .2s ease-in-out;
+      transition: $speedHeaderOpen ease-in-out;
     }
   }
 
@@ -53,14 +52,6 @@
     h2 {
       font-family: 'Lobster', cursive;
       font-size: 90px;
-
-      .letter {
-
-      }
-    }
-
-    .job {
-
     }
   }
 

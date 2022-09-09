@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { IInitialState } from '../core/interfaces';
 
 const initialState: IInitialState = {
@@ -13,8 +13,8 @@ const myPortfolio = createSlice({
 		changeMobileIsOpen(state) {
 			state.mobileIsOpen = !state.mobileIsOpen;
 		},
-		checkContactClick(state, action: PayloadAction<boolean>) {
-			state.contactIsOpen = action.payload;
+		checkContactClick(state) {
+			state.contactIsOpen = !state.mobileIsOpen;
 		},
 	},
 });

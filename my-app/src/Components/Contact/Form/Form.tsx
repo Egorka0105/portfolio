@@ -12,7 +12,7 @@ const Form: FC = () => {
 
 	const handlerSubmit = (e: FormEvent) => {
 		e.preventDefault();
-		dispatch(checkContactClick(true));
+		dispatch(checkContactClick());
 	};
 
 	return (

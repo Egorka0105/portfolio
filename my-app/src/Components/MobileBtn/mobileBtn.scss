@@ -18,6 +18,7 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
+  z-index: $mobileBtnZ-index;
 
   @include display-1024 {
     display: flex;

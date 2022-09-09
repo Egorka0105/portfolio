@@ -4,7 +4,7 @@ import content from 'core/content.json';
 import ModalWindowNavAnimation from '../ModalWindowNavAnimation/ModalWindowNavAnimation';
 import clN from './skills.module.scss';
 import ItemSkill from './ItemSkill';
-import Slider from '../ConstantComponents/Slider';
+import Slider from './Slider';
 
 const Skills: FC = () => {
 	const { skills } = content;

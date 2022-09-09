@@ -4,6 +4,13 @@
 $mobileBtnLineWidthClose: 35px;
 $mobileBtnLineWidthOpen: 8px;
 
+
+$mobileBtnZ-index: 99;
+$headerZ-index: 99;
+
+$speedHeaderOpen: .5s;
+$speedHeaderClose: .5s;
+
 @mixin display-1200 {
   @media (max-width: 1200px) {
     @content
@@ -39,6 +46,14 @@ $mobileBtnLineWidthOpen: 8px;
     @content
   }
 }
+
+@mixin displayHeight-550 {
+  @media (max-height: 550px) {
+    @content
+  }
+}
+
+
 
 @mixin tagBefore($left:0,$top:0) {
   font-family: 'La Belle Aurore', cursive;

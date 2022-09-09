@@ -4,7 +4,7 @@ import Header from './Components/Header/Header';
 import MobileBtn from './Components/MobileBtn/MobileBtn';
 import clN from './index.module.scss';
 import { useAppSelector } from './core/interfaces';
-// import Routs from './Components/ConstantComponents/Routs';
+import Routs from './Components/ConstantComponents/Routs';
 
 const App = () => {
 	const isMobileOpen = useAppSelector(state => state.portfolio.mobileIsOpen);
@@ -12,7 +12,9 @@ const App = () => {
 	return (
 		<div className={clN.app}>
 			<Header />
-			<main className={cn(clN.main, { [clN.blur]: isMobileOpen === true })} />
+			<main className={cn(clN.main, { [clN.blur]: isMobileOpen === true })}>
+				<Routs />
+			</main>
 			<MobileBtn />
 		</div>
 	);
