@@ -1,16 +1,18 @@
 import React, { FC } from 'react';
-import clN from './experience.module.scss';
 import ModalWindowNavAnimation from '../ModalWindowNavAnimation/ModalWindowNavAnimation';
-import Jobs from './Jobs/Jobs';
-import Projects from './Projects/Projects';
+import Jobs from './Jobs';
+import Projects from './Projects';
+import Road from './Road';
+import './experience.scss';
 
 const Experience: FC = () => {
 	return (
 		<>
 			<ModalWindowNavAnimation />
-			<div className={clN.experience}>
+			<div className="experience">
 				<Jobs />
 				<Projects />
+				<Road />
 			</div>
 		</>
 	);

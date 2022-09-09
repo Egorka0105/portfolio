@@ -1,0 +1,173 @@
+@import "src/assets/css/mixin";
+@import "src/assets/css/colors";
+@import "src/assets/css/animations";
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .jobs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 20px 0 20px;
+
+    @include display-960 {
+      flex-wrap: nowrap;
+    }
+
+    &__title {
+      text-align: center;
+      color: $bannerBtnText;
+    }
+
+    .allJobs {
+      display: flex;
+      justify-content: space-evenly;
+
+      @include display-960 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__wrapper {
+        width: 40%;
+        height: fit-content;
+        padding: 20px 40px;
+        background-color: $experienceBackground;
+        border-radius: 4px;
+        margin-top: 30px;
+        letter-spacing: 2px;
+        color: $bannerBtnText;
+
+        @include display-1024 {
+          padding: 20px 30px;
+        }
+        @include display-960 {
+          width: 84%;
+        }
+
+        @include display-768 {
+          margin: 30px 40px 0 10px;
+        }
+
+        @include display-768 {
+          margin: 30px 60px 0 0;
+        }
+
+        .company {
+          font-weight: 500;
+          margin: 5px 0;
+        }
+
+        .period {
+          font-weight: 300;
+          font-size: 15px;
+        }
+
+        .location {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .projects {
+    margin-top: 30px;
+
+    &__title {
+      text-align: center;
+      color: $bannerBtnText;
+      margin-bottom: 30px;
+    }
+
+    .project-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      @include display-1200{
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project {
+        width: 40%;
+        padding: 20px;
+        background-color: $experienceBackground;
+        border-radius: 4px;
+        color: $bannerBtnText;
+        letter-spacing: 1px;
+
+        @include display-1200{
+          max-width: 100%;
+          width: 80%;
+          margin-top: 20px;
+        }
+
+        @include display-768 {
+          margin: 30px 60px 0 0;
+        }
+
+        &__role {
+          margin: 6px 0;
+        }
+
+        &__tools {
+          margin: 6px 0;
+        }
+      }
+    }
+  }
+
+  .road{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 50px;
+    overflow-x: hidden;
+    width: 100%;
+
+    .road-canvas{
+      margin-right: 300px;
+      transform: translateX(calc(-100vh - 300px));
+      animation: runMen 5s linear 1.5s forwards;
+    }
+
+    .finish{
+      position: absolute;
+      bottom: 10px;
+      right: 50px;
+      height: 80px;
+      margin-right: 100px;
+      transform: translateX(calc(100vh + 200px));
+      animation: runMen 5s linear 3s forwards;
+
+      @include display-480 {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  // body tag open
+  &:before {
+    content: "<body>";
+    @include tagBefore(190px, 20px);
+
+    @include display-1024 {
+      left: 30px;
+    }
+  }
+
+  // body tag close
+  &:after {
+    content: "<body/>";
+    @include tagAfter(190px, 20px);
+
+    @include display-1024 {
+      left: 30px;
+    }
+  }
+}

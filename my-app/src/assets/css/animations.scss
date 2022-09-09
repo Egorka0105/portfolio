@@ -218,3 +218,11 @@
     transform: translate(0, 0);
   }
 }
+
+// road canvas animations
+
+@keyframes runMen {
+  100% {
+    transform: translateX(0);
+  }
+}

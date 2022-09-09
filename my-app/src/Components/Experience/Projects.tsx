@@ -1,6 +1,6 @@
 import React from 'react';
 import content from 'core/content.json';
-import './projects.scss';
+import './experience.scss';
 
 const Projects = () => {
 	const { projects } = content.experience;
