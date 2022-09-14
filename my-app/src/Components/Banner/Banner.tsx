@@ -1,27 +1,23 @@
-import React, { useState } from 'react';
-import content from 'core/content.json';
-import cn from 'classnames';
-import { bannerTitleCreate } from 'core/functions';
-import Phone from './Phone';
+import React from 'react';
 import ModalWindowNavAnimation from '../ModalWindowNavAnimation/ModalWindowNavAnimation';
 import clN from './banner.module.scss';
+import BannerCanvas from './BannerCanvas';
 
 const Banner = () => {
-	const [btnIsOpen, setBtnIsOpen] = useState(false);
-	const bannerTitle = bannerTitleCreate(content.banner.title);
-
 	return (
 		<>
 			<ModalWindowNavAnimation />
 			<div className={clN.banner}>
-				<div className={clN.banner__title}>{bannerTitle}</div>
-				<p className={clN.banner__subTitle}>Front-end / React developer</p>
-				<div className={clN.banner__contact}>
-					<button type="button" className={cn('btn', clN.btn, { btnIsOpen })} onClick={() => setBtnIsOpen(!btnIsOpen)}>
-						Contact me
-					</button>
-					{btnIsOpen && <Phone />}
+				<div className={clN.banner__textWrapper}>
+					<div className={clN.title}>
+						Hi, I’m <br /> <strong>Ihor</strong> Dudkevych
+					</div>
+					<h2 className={clN.subTitle}>
+						Front-end / React &nbsp;
+						<strong>developer</strong>
+					</h2>
 				</div>
+				<BannerCanvas />
 			</div>
 		</>
 	);

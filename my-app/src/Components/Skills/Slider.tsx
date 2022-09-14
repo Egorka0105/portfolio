@@ -34,20 +34,20 @@ const Slider: FC = () => {
 					},
 				}}
 			>
-				<SwiperSlide className="slide-wrapper">
-					<img className="toolsItem" alt="jira" src={jira} />
+				<SwiperSlide className="slide-wrapper slide">
+					<img width={100} className="toolsItem" alt="jira" src={jira} />
 				</SwiperSlide>
-				<SwiperSlide className="slide-wrapper">
-					<img className="toolsItem" alt="webstorm" src={webstorm} />
+				<SwiperSlide className="slide-wrapper slide">
+					<img width={100} className="toolsItem" alt="webstorm" src={webstorm} />
 				</SwiperSlide>
-				<SwiperSlide className="slide-wrapper">
-					<img className="toolsItem" alt="windows" src={windows} />
+				<SwiperSlide className="slide-wrapper slide">
+					<img width={100} className="toolsItem" alt="windows" src={windows} />
 				</SwiperSlide>
-				<SwiperSlide className="slide-wrapper">
-					<img className="toolsItem" alt="figma" src={figma} />
+				<SwiperSlide className="slide-wrapper slide">
+					<img width={100} className="toolsItem" alt="figma" src={figma} />
 				</SwiperSlide>
-				<SwiperSlide className="slide-wrapper">
-					<img className="toolsItem" alt="confluence" src={confluence} />
+				<SwiperSlide className="slide-wrapper slide">
+					<img width={100} className="toolsItem" alt="confluence" src={confluence} />
 				</SwiperSlide>
 			</Swiper>
 		</div>
