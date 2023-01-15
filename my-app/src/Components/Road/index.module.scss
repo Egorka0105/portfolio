@@ -1,0 +1,30 @@
+@import "src/assets/styles/imports";
+
+.road {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 50px;
+  overflow-x: hidden;
+  width: 100%;
+
+  .road_canvas {
+    margin-right: 300px;
+    transform: translateX(calc(-100vh - 300px));
+    animation: runMen 5s linear 1.5s forwards;
+  }
+
+  .finish {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    height: 80px;
+    margin-right: 100px;
+    transform: translateX(calc(100vh + 200px));
+    animation: runMen 5s linear 3s forwards;
+
+    @include display-480 {
+      margin-right: 30px;
+    }
+  }
+}

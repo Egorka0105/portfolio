@@ -1,0 +1,115 @@
+@import "src/assets/styles/imports";
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  padding-bottom: 80px;
+
+  @include display-960 {
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 100px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    @include display-960 {
+      width: 100%;
+      margin-top: 130px;
+    }
+
+    .text {
+      position: relative;
+      text-align: center;
+      font-size: 22px;
+      line-height: 28px;
+      padding-left: 30px;
+
+      @include display-1200 {
+        font-size: 19px;
+      }
+
+      @include display-960 {
+        padding-left: 100px;
+        padding-right: 50px;
+      }
+
+      @include display-480 {
+        font-size: 14px;
+        padding-left: 60px;
+        padding-right: 40px;
+        line-height: 26px;
+      }
+
+      &:before {
+        @include tagBefore(60px, -30px);
+        content: "<p>";
+      }
+
+      &:after {
+        @include tagAfter(60px, -30px);
+        content: "<p/>";
+      }
+    }
+  }
+
+  &__skillsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px 10px 50px;
+
+    @include display-1024 {
+      padding: 10px 80px 10px 50px;
+    }
+
+    @include display-480 {
+      padding: 10px 50px 10px 10px;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    ul {
+      overflow-x: hidden;
+      width: 100%;
+      margin-top: 30px;
+      padding-bottom: 30px;
+
+      @include display-768 {
+        padding: 0 30px 30px 30px;
+      }
+    }
+  }
+
+
+  // body tag open
+  &:before {
+    content: "<body>";
+    @include tagBefore(190px, 20px);
+
+    @include display-1024 {
+      left: 30px;
+    }
+  }
+
+  // body tag close
+  &:after {
+    content: "<body/>";
+    @include tagAfter(190px, 20px);
+
+    @include display-1024 {
+      left: 30px;
+    }
+  }
+}
+
+
