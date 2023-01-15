@@ -1,0 +1,93 @@
+@import "src/assets/styles/imports";
+
+.banner {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: $bannerTextColor;
+  z-index: 2;
+
+  @include display-960 {
+    padding: 0 10px;
+  }
+
+  @include display-960 {
+    padding: 0 10px;
+  }
+
+  @include displayHeight-550 {
+    margin-bottom: 100px;
+  }
+
+  &__textWrapper {
+    position: absolute;
+    left: 200px;
+    top: 48%;
+    transform: translateY(-50%);
+
+    @include display-1024 {
+      left: 30px;
+    }
+
+    @include display-480 {
+      left: 20px;
+    }
+
+
+    // main title - h1
+    .title {
+      font-size: 64px;
+      letter-spacing: 4px;
+      font-weight: 700;
+
+      strong {
+        color: $bannerSecondTextColor;
+      }
+
+      @include display-768 {
+        font-size: 50px;
+      }
+
+      @include display-480 {
+        font-size: 30px;
+        padding: 0;
+      }
+
+      @include displayHeight-550 {
+        margin-top: 80px;
+      }
+
+      span {
+        transition: all 0.8s ease-out;
+        display: inline-block;
+
+        &:hover {
+          color: $bannerTitleHover;
+          animation: bannerText 1s;
+          transition: all 0.8s ease-out;
+        }
+      }
+    }
+
+    .subTitle {
+      margin-top: 20px;
+      letter-spacing: 4px;
+      display: block;
+      color: $bannerTextColor;
+
+      strong {
+        color: $bannerSecondTextColor;
+      }
+
+
+      @include display-480 {
+        padding: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,36 @@
+@import "colors";
+@import "mixin";
+@import "animations";
+
+.btn {
+  position: relative;
+  letter-spacing: 4px;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: $bannerBtnBackground;
+  color: $bannerBtnText;
+  border: 1px solid $bannerBtnBorder;
+  border-radius: 4px;
+  transition: 1s ease;
+
+  &:hover {
+    color: $bannerBtnHoverText;
+    background-color: $bannerBtnHoverBackground;
+    transition: 1s ease;
+  }
+
+  &.btnIsOpen {
+    background-color: $btnIsOpenBack;
+    color: $bannerBtnHoverText;
+  }
+}
+
+.slide-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .toolsItem {
+    max-width: 100px;
+  }
+}

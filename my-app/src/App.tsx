@@ -1,12 +1,11 @@
-import React from 'react';
+import { FC } from 'react';
 import cn from 'classnames';
-import Header from './Components/Header/Header';
-import MobileBtn from './Components/MobileBtn/MobileBtn';
+import { Header } from 'pages';
+import { MobileBtn, Routs } from 'Components';
 import clN from './index.module.scss';
 import { useAppSelector } from './core/interfaces';
-import Routs from './Components/ConstantComponents/Routs';
 
-const App = () => {
+const App: FC = () => {
 	const isMobileOpen = useAppSelector(state => state.portfolio.mobileIsOpen);
 
 	return (

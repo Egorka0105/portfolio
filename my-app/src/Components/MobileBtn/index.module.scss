@@ -1,0 +1,63 @@
+@import "src/assets/styles/imports";
+
+.mobileBtn {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: $mobileBtnLineWidthClose;
+  height: $mobileBtnLineWidthClose;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  margin: auto;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  z-index: $mobileBtnZ-index;
+
+  @include display-1024 {
+    display: flex;
+  }
+
+  &__stick {
+    width: $mobileBtnLineWidthClose;
+    height: 3px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background-color: $tagColor;
+    display: inline-block;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__stick1.open {
+    animation: stick-1-open .6s ease-out forwards;
+  }
+
+  &__stick2.open {
+    animation: stick-2-open .6s linear forwards;
+  }
+
+  &__stick3.open {
+    animation: stick-3-open .6s linear forwards;
+  }
+
+  &__stick1.close {
+    width: $mobileBtnLineWidthOpen;
+    transform: translate(27px, 26px);
+    animation: stick-1-close .6s ease-out forwards;
+  }
+
+  &__stick2.close {
+    transform: translate(0px, 0px) rotate(40deg);
+    animation: stick-2-close .6s ease-out forwards;
+  }
+
+  &__stick3.close {
+    transform: translate(0px, -23px) rotate(-40deg);
+    animation: stick-3-close .6s ease-out forwards;
+  }
+}
