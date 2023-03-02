@@ -1,4 +1,4 @@
-@import "assets/styles/main";
+@import "src/assets/styles/main";
 
 .about {
   display: flex;
@@ -8,7 +8,8 @@
   min-height: 100vh;
 
   @include display-1024 {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__textWrapper {
@@ -17,6 +18,7 @@
 
     @include display-1024 {
       max-width: 100%;
+      margin-top: 100px;
     }
 
     .text {
@@ -69,10 +71,6 @@
         position: relative;
         padding-top: 10px;
 
-        @include display-1024 {
-          margin-bottom: 80px;
-        }
-
         li {
           display: flex;
           margin-top: 10px;
@@ -87,19 +85,13 @@
         // tag ul open
         &:before {
           content: "<ul>";
-          @include tagBefore(-20px, -20pxpx);
-          @include display-1200 {
-            display: none;
-          }
+          @include tagBefore(-20px, 10px);
         }
 
         // tag ul close
         &:after {
           content: "<ul/>";
           @include tagAfter(-20px, -25px);
-          @include display-1200 {
-            display: none;
-          }
         }
       }
     }
@@ -107,13 +99,21 @@
 
   &__imgWrapper {
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    align-self: end;
+    max-width: 510px;
+
+    @include display-1024 {
+      justify-content: center;
+      align-self: center;
+    }
 
     .portrait {
-      animation: portrait 1.5s ease-in-out forwards 1.8s;
+      animation: portrait 3s ease forwards 1.8s;
+      width: 100%;
 
       @include display-1024 {
-        max-width: 60%;
+        max-width: 80%;
       }
     }
   }
