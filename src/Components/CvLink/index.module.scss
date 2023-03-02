@@ -1,0 +1,17 @@
+@import "assets/styles/main";
+
+.downloadCV {
+  align-self: flex-end;
+  bottom: 20px;
+  margin: 30px auto 70px auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid $AllTextColor;
+  padding: 10px;
+
+  & > a {
+    color: $AllTextColor;
+  }
+}

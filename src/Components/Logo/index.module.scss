@@ -1,0 +1,14 @@
+@import "assets/styles/main";
+
+.logo {
+  color: $logo-text;
+
+  .title {
+    font-family: 'Lobster', cursive;
+    font-size: 90px;
+  }
+
+  .description {
+    color: $bannerSecondTextColor;
+  }
+}

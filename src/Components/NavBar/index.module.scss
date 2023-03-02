@@ -1,0 +1,17 @@
+@import "assets/styles/main";
+
+.navBar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 100%;
+  border-top: 1px solid $header-border;
+
+  &__item {
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid $header-border;
+    width: 100%;
+    color: $nav-bar;
+  }
+}

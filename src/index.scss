@@ -1,0 +1,65 @@
+@import "assets/styles/main";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-family: 'Noto Serif', serif;
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  font-family: 'Noto Serif', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif', serif;
+}
+
+.test {
+  font-family: 'La Belle Aurore', cursive;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Noto Serif',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style-type: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+input, textarea {
+  border: none;
+
+  &:focus {
+    border: none;
+  }
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.slide{
+  display: flex;
+  justify-content: center;
+}
