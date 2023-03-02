@@ -1,0 +1,68 @@
+@import "assets/styles/main";
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 50px 20px 0 20px;
+
+  @include display-960 {
+    flex-wrap: nowrap;
+  }
+
+  &__title {
+    text-align: center;
+    color: $bannerBtnText;
+  }
+
+  .allJobs {
+    display: flex;
+    justify-content: space-evenly;
+
+    @include display-960 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__wrapper {
+      width: 40%;
+      height: fit-content;
+      padding: 20px 40px;
+      background-color: $experienceBackground;
+      border-radius: 4px;
+      margin-top: 30px;
+      letter-spacing: 2px;
+      color: $bannerBtnText;
+
+      @include display-1024 {
+        padding: 20px 30px;
+      }
+      @include display-960 {
+        width: 84%;
+      }
+
+      @include display-768 {
+        margin: 30px 40px 0 10px;
+      }
+
+      @include display-768 {
+        margin: 30px 60px 0 0;
+      }
+
+      .company {
+        font-weight: 500;
+        margin: 5px 0;
+      }
+
+      .period {
+        font-weight: 300;
+        font-size: 15px;
+      }
+
+      .location {
+        margin-top: 5px;
+      }
+    }
+  }
+}

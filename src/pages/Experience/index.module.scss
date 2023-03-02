@@ -1,0 +1,27 @@
+@import "assets/styles/main";
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // body tag open
+  &:before {
+    content: "<body>";
+    @include tagBefore(190px, 20px);
+
+    @include display-1024 {
+      left: 30px;
+    }
+  }
+
+  // body tag close
+  &:after {
+    content: "<body/>";
+    @include tagAfter(190px, 20px);
+
+    @include display-1024 {
+      left: 30px;
+    }
+  }
+}
