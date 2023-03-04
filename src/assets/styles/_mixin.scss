@@ -1,9 +1,7 @@
 @import "colors";
 
-
 $mobileBtnLineWidthClose: 35px;
 $mobileBtnLineWidthOpen: 8px;
-
 
 $mobileBtnZ-index: 99;
 $headerZ-index: 99;
@@ -55,7 +53,7 @@ $speedHeaderClose: .5s;
 
 @mixin tagBefore($left:0,$top:0) {
   font-family: 'La Belle Aurore', cursive;
-  color: $tagColor;
+  color: $darkYellow;
   font-size: 18px;
   font-weight: 500;
   position: absolute;
@@ -65,7 +63,7 @@ $speedHeaderClose: .5s;
 
 @mixin tagAfter($left:0,$bottom:0) {
   font-family: 'La Belle Aurore', cursive;
-  color: $tagColor;
+  color: $darkYellow;
   font-size: 18px;
   font-weight: 500;
   position: absolute;

@@ -106,10 +106,10 @@
 
 @keyframes portrait {
   0% {
-    clip-path: ellipse(1% 1% at 50% 50%);
+    opacity: 0;
   }
   100% {
-    clip-path: ellipse(49% 41% at 50% 50%);
+    opacity: 1;
   }
 }
 
@@ -120,7 +120,7 @@
     width: $mobileBtnLineWidthClose;
   }
   40% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     width: $mobileBtnLineWidthOpen;
     transform: translate(40px, 0);
   }
@@ -130,7 +130,7 @@
     animation-timing-function: cubic-bezier(0, 1, 1, 1);
   }
   100% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     width: 0;
     transform: translate(35px, 46px);
     display: none;
@@ -139,22 +139,22 @@
 
 @keyframes stick-2-open {
   80% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     transform: translate(0, 0) rotate(0);
   }
   100% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     transform: translate(1px, 1px) rotate(40deg);
   }
 }
 
 @keyframes stick-3-open {
   80% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     transform: translate(0, 0px) rotate(0);
   }
   100% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     transform: translate(0px, -7px) rotate(-40deg);
   }
 }
@@ -171,15 +171,15 @@
 
 @keyframes stick-2-close {
   0% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     width: 0;
   }
   20% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     transform: translate(0, 0) rotate(40deg);
   }
   40% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
   }
   65% {
     transform: translate(0, -70px);
@@ -196,16 +196,16 @@
 
 @keyframes stick-3-close {
   0% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     width: 0;
   }
   20% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
     width: 0;
     transform: translate(0, -23px) rotate(-40deg);
   }
   40% {
-    background-color: $btnClose;
+    background-color: src/assets/styles/main;
   }
   65% {
     transform: translate(0, -93px);

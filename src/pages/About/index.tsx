@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import myPhoto from 'assets/images/portfolio_photo.png';
 import content from 'core/content.json';
 import iconGreen from 'assets/images/icongreen.png';
 import { nanoid } from '@reduxjs/toolkit';
-import { AnimationModal } from 'Components';
+import myPhoto from 'assets/images/portfolio_photo.png';
 import clN from './index.module.scss';
+import { AnimationModal } from '../../Components';
 
 export const About: FC = () => {
 	const { textAboutMe, hobby } = content.about;
@@ -12,14 +12,13 @@ export const About: FC = () => {
 	return (
 		<>
 			<AnimationModal />
-
 			<div className={clN.about}>
 				<div className={clN.about__textWrapper}>
 					<div>
 						<h2>Some info</h2>
 						<p className={clN.text}>{textAboutMe}</p>
 					</div>
-					<div className="hobby">
+					<div className={clN.hobby}>
 						<h2>Hobby</h2>
 						<ul>
 							{hobby.map(hobbyItem => {
