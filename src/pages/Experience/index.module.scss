@@ -3,7 +3,27 @@
 .experience {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 50px 20px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 70%;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 40px;
+    background-color: $experienceBackground;
+    border-radius: 8px;
+    margin-top: 30px;
+    color: $bannerBtnText;
+
+    .title {
+      font-weight: 400;
+    }
+  }
 
   // body tag open
   &:before {

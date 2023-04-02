@@ -32,7 +32,6 @@
 }
 
 // header
-
 @keyframes headerView {
   0% {
     transform: translateX(-120%);
@@ -55,7 +54,6 @@
 }
 
 // route animation
-
 @keyframes waiting {
   0% {
     height: 0;
@@ -94,7 +92,6 @@
 }
 
 // skills list
-
 @keyframes skillsListOpen {
   100% {
     transform: translateX(0);
@@ -103,7 +100,6 @@
 
 
 // about
-
 @keyframes portrait {
   0% {
     opacity: 0;
@@ -114,13 +110,12 @@
 }
 
 // mobile btn animations
-
 @keyframes stick-1-open {
   0% {
     width: $mobileBtnLineWidthClose;
   }
   40% {
-    background-color: src/assets/styles/main;
+    background-color: $mainWhite;
     width: $mobileBtnLineWidthOpen;
     transform: translate(40px, 0);
   }
@@ -130,7 +125,7 @@
     animation-timing-function: cubic-bezier(0, 1, 1, 1);
   }
   100% {
-    background-color: src/assets/styles/main;
+    background-color: $blue;
     width: 0;
     transform: translate(35px, 46px);
     display: none;
@@ -139,22 +134,22 @@
 
 @keyframes stick-2-open {
   80% {
-    background-color: src/assets/styles/main;
+    background-color: $blue;
     transform: translate(0, 0) rotate(0);
   }
   100% {
-    background-color: src/assets/styles/main;
+    background-color: $blue;
     transform: translate(1px, 1px) rotate(40deg);
   }
 }
 
 @keyframes stick-3-open {
   80% {
-    background-color: src/assets/styles/main;
+    background-color: $blue;
     transform: translate(0, 0px) rotate(0);
   }
   100% {
-    background-color: src/assets/styles/main;
+    background-color: $blue;
     transform: translate(0px, -7px) rotate(-40deg);
   }
 }
@@ -171,15 +166,15 @@
 
 @keyframes stick-2-close {
   0% {
-    background-color: src/assets/styles/main;
+    background-color: $mainWhite;
     width: 0;
   }
   20% {
-    background-color: src/assets/styles/main;
+    background-color: $mainWhite;
     transform: translate(0, 0) rotate(40deg);
   }
   40% {
-    background-color: src/assets/styles/main;
+    background-color: $mainWhite;
   }
   65% {
     transform: translate(0, -70px);
@@ -196,16 +191,16 @@
 
 @keyframes stick-3-close {
   0% {
-    background-color: src/assets/styles/main;
+    background-color: $blue;
     width: 0;
   }
   20% {
-    background-color: src/assets/styles/main;
+    background-color: $blue;
     width: 0;
     transform: translate(0, -23px) rotate(-40deg);
   }
   40% {
-    background-color: src/assets/styles/main;
+    background-color: $blue;
   }
   65% {
     transform: translate(0, -93px);
@@ -221,7 +216,6 @@
 }
 
 // road canvas animations
-
 @keyframes runMen {
   100% {
     transform: translateX(0);
