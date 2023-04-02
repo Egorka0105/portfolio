@@ -45,12 +45,6 @@ $speedHeaderClose: .5s;
   }
 }
 
-@mixin displayHeight-550 {
-  @media (max-height: 550px) {
-    @content
-  }
-}
-
 @mixin tagBefore($left:0,$top:0) {
   font-family: 'La Belle Aurore', cursive;
   color: $darkYellow;

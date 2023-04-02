@@ -1,10 +1,8 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router';
 import { Header } from 'pages';
-
 import cn from 'classnames';
 import { useAppSelector } from 'core/interfaces';
-
 import { MobileBtn } from 'Components';
 import clN from './index.module.scss';
 

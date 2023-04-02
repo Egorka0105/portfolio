@@ -63,3 +63,7 @@ input, textarea {
   display: flex;
   justify-content: center;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

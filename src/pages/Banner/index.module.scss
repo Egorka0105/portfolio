@@ -1,8 +1,8 @@
 @import "src/assets/styles/main";
 
-.banner {
+.banner_text {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   color: $bannerTextColor;
@@ -12,23 +12,12 @@
     padding: 0 10px;
   }
 
-  @include display-960 {
-    padding: 0 10px;
-  }
-
-  @include displayHeight-550 {
-    margin-bottom: 100px;
-  }
-
-  &__textWrapper {
+  &__wrapper {
     position: absolute;
-    left: 200px;
+    left: 50px;
     top: 48%;
     transform: translateY(-50%);
-
-    @include display-1024 {
-      left: 30px;
-    }
+    z-index: 5;
 
     @include display-480 {
       left: 20px;
@@ -52,10 +41,6 @@
       @include display-480 {
         font-size: 30px;
         padding: 0;
-      }
-
-      @include displayHeight-550 {
-        margin-top: 80px;
       }
 
       span {
@@ -88,6 +73,3 @@
     }
   }
 }
-
-
-

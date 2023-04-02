@@ -101,7 +101,7 @@
     display: flex;
     justify-content: end;
     align-self: end;
-    max-width: 510px;
+    max-width: 400px;
 
     @include display-1024 {
       justify-content: center;

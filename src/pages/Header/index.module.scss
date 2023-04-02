@@ -4,19 +4,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 150px;
   height: 100vh;
   background-color: $headerBackground;
   border-right: 1px solid $header-border;
   z-index: $headerZ-index;
   overflow: hidden auto;
-  animation: headerView $speedHeaderOpen ease-in-out;
+  // animation: headerView $speedHeaderOpen ease-in-out;
   animation-fill-mode: forwards;
 
   @include display-1024 {
+    position: fixed;
+    top: 0;
+    // left: 0;
     left: -100%;
     transition: $speedHeaderOpen ease-in-out;
 

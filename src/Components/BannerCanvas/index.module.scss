@@ -1,5 +1,12 @@
+@import "src/assets/styles/main";
+
 .bannerCanvas {
   overflow: hidden;
   background-color: transparent;
   z-index: 1;
+  margin: 20px;
+
+  @include display-960 {
+    margin: 0;
+  }
 }

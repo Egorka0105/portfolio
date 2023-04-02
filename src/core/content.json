@@ -90,40 +90,26 @@
       }
     ]
   },
-  "experience": {
-    "jobs": [
-      {
-        "key": "job01",
-        "companyName": "DevOcean",
-        "dayStart": "09.2021",
-        "dayFinish": "11.2021",
-        "location": "Vinnitsa",
-        "position": "Web Developer"
-      },
-      {
-        "key": "job02",
-        "companyName": "Five System Development",
-        "dayStart": "11.2021",
-        "dayFinish": "Present time",
-        "location": "Vinnitsa",
-        "position": "Front-end Developer"
-      }
-    ],
-    "projects": [
-      {
-        "key": "project00",
-        "name": "First project",
-        "role": "Front-end developer",
-        "tools": "HTML5, Scss, JS, React, Redux, Formik.",
-        "responsibilities": "Create a new input fields, update styles, error correction."
-      },
-      {
-        "key": "project01",
-        "name": "Second project",
-        "role": "Front-end developer",
-        "tools": "HTML5, Styled-Components, JS, React, Redux-Saga.",
-        "responsibilities": "I develop the general appearance and design elements of the site, develop new features (new forms, pages, etc.), correct any site problems or bugs that arise, including functional changes, responsive design, etc."
-      }
-    ]
-  }
+  "experience": [
+    {
+      "title": "Project: № 1",
+      "tools": "HTML5, Scss, React, Redux, Formik, Axios, Styled-Components, Git",
+      "responsibilities": "Creating new input fields, creating and refactoring validation of input fields. Creating new components and adding logic. Working with BE, updating styles, fixing bugs."
+    },
+    {
+      "title": "Project: № 2",
+      "tools": "HTML5, Scss, React, Redux-Saga, Formik, Axios, Ant design, Git, Typescript",
+      "responsibilities": "Code refactor by task. Customize styling on different pages and components. Making changes to the logic of existing components. Interaction with BE."
+    },
+    {
+      "title": "Project: № 3",
+      "tools": "HTML5, Scss, Next.js, Formik, Axios, Animations, Git, i18-next",
+      "responsibilities": "I added css animations and customized the page for different display resolutions. Reworked navBar, contact page, page with a feedback form. Interaction with BE."
+    },
+    {
+      "title": "Project: № 4 (current)",
+      "tools": "HTML5, Scss, React, Redux, Redux-Toolkit, Formik, Axios, Git, Material-ui, i18-next, Typescript",
+      "responsibilities": "I customized the MUI theme and changed types. I customized i18-next. Created a landing page, login page, profile page. Created private routing, standard and Google authorization logic, set up interceptors. Created some shared components for use in forms. Interaction and problem solving with BE."
+    }
+  ]
 }

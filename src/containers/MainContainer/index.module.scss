@@ -1,16 +1,17 @@
 @import "src/assets/styles/main";
 
+.container {
+  display: flex;
+  position: relative;
+}
+
 .main {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-color: $main-background;
-  padding-left: 150px;
-  overflow: hidden;
-
-  @include display-1200 {
-    height: 100%;
-  }
+  overflow-x: hidden;
+  overflow-y: auto;
 
   @include display-1024 {
     padding-left: 0;
@@ -27,29 +28,15 @@
     }
   }
 
-  @include displayHeight-550 {
-    height: max-content;
-    overflow-y: auto;
-  }
-
   // html tag open
   &::before {
     content: "<html>";
-    @include tagBefore(160px, 0px);
-
-    @include display-1024 {
-      left: 0;
-    }
+    @include tagBefore();
   }
 
   // html tag close
   &:after {
     content: "<html/>";
-    @include tagAfter(160px, 0px);
-
-    @include display-1024 {
-      left: 0;
-      bottom: 0;
-    }
+    @include tagAfter();
   }
 }
