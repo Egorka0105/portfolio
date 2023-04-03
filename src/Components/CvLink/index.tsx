@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import CV from 'assets/Ihor_Dudkevych.pdf';
+import CV from 'assets/Ihor_Dudkevych_React.pdf';
 import clN from './index.module.scss';
 
 export const CvLink: FC = () => {
