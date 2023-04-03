@@ -16,21 +16,23 @@ export const Experience: FC = () => {
 			<AnimationModal />
 
 			<div className={clN.experience}>
-				{experience.map((project: IExperienceProject) => {
-					return (
-						<div className={clN.experience__wrapper} key={project.title}>
-							<h2 className={clN.title}>{project.title}</h2>
-							<div className={clN.tools}>
-								<span>Tools: </span>
-								<span>{project.tools}</span>
+				<div className={clN.experience__wrapper}>
+					{experience.map((project: IExperienceProject) => {
+						return (
+							<div className={clN.experience__content} key={project.title}>
+								<h2 className={clN.title}>{project.title}</h2>
+								<div className={clN.tools}>
+									<span>Tools: </span>
+									<span>{project.tools}</span>
+								</div>
+								<div className={clN.responsibilities}>
+									<span>Responsibilities: </span>
+									<span>{project.responsibilities}</span>
+								</div>
 							</div>
-							<div className={clN.responsibilities}>
-								<span>Responsibilities: </span>
-								<span>{project.responsibilities}</span>
-							</div>
-						</div>
-					);
-				})}
+						);
+					})}
+				</div>
 			</div>
 		</>
 	);
