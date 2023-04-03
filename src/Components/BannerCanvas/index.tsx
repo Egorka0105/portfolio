@@ -176,10 +176,11 @@ export const BannerCanvas = () => {
 
 				return () => {
 					TweenLite.ticker.removeEventListener('tick', draw);
+					cancelAnimationFrame(canvasRef.current)
 				};
 			}
 		}
-	}, []);
+	}, [canvasRef.current]);
 
 	return (
 		<div className={clN.bannerCanvas}>

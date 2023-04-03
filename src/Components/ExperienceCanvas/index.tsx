@@ -7,10 +7,8 @@ import clN from './index.module.scss';
 
 export const ExperienceCanvas: FC = () => {
 	const canvasRef = useRef<CanvasRef>(null);
-
 	let rotation = 0;
 	let dots = [];
-	let requestID = null;
 
 	useLayoutEffect(() => {
 		const canvas: HTMLCanvasElement = canvasRef.current;
@@ -27,6 +25,7 @@ export const ExperienceCanvas: FC = () => {
 		let PROJECTION_CENTER_X = width / 2;
 		let PROJECTION_CENTER_Y = height / 2;
 		let FIELD_OF_VIEW = width * 0.8;
+		let requestID = null;
 
 		class Dot {
 			constructor(x, y, z) {
@@ -50,7 +49,6 @@ export const ExperienceCanvas: FC = () => {
 			draw(sin, cos) {
 				this.project(sin, cos);
 				ctx.fillStyle = 'rgb(17, 125, 204, .7)';
-				// ctx.fillRect(this.xProject - DOT_RADIUS, this.yProject - DOT_RADIUS, DOT_RADIUS * 2 * this.sizeProjection, DOT_RADIUS * 2 * this.sizeProjection);
 				ctx.beginPath();
 				ctx.arc(this.xProject, this.yProject, DOT_RADIUS * this.sizeProjection, 0, Math.PI * 2);
 				ctx.closePath();
@@ -59,12 +57,11 @@ export const ExperienceCanvas: FC = () => {
 		}
 
 		function createDots() {
-			// Empty the array of dots
 			dots.length = 0;
 
 			for (let i = 0; i < DOTS_AMOUNT; i++) {
-				const theta = Math.random() * 2 * Math.PI; // Random value between [0, 2PI]
-				const phi = Math.acos(Math.random() * 2 - 1); // Random value between [-1, 1]
+				const theta = Math.random() * 2 * Math.PI;
+				const phi = Math.acos(Math.random() * 2 - 1);
 
 				const x = GLOBE_RADIUS * Math.sin(phi) * Math.cos(theta);
 				const y = GLOBE_RADIUS * Math.sin(phi) * Math.sin(theta);
@@ -74,21 +71,20 @@ export const ExperienceCanvas: FC = () => {
 		}
 
 		const render = (a: DOMHighResTimeStamp) => {
-			// Clear the scene
 			ctx.clearRect(0, 0, width, height);
 
 			// Increase the globe rotation
 			rotation = a * 0.0002;
 
-			const sineRotation = Math.sin(rotation); // Sine of the rotation
-			const cosineRotation = Math.cos(rotation); // Cosine of the rotation
+			const sineRotation = Math.sin(rotation);
+			const cosineRotation = Math.cos(rotation);
 
 			// Loop through the dots array and draw every dot
 			dots.forEach(item => {
 				item.draw(sineRotation, cosineRotation);
 			});
 
-			requestID = requestAnimationFrame(render);
+			requestAnimationFrame(render);
 		};
 
 		function stopRender() {
@@ -140,8 +136,9 @@ export const ExperienceCanvas: FC = () => {
 			stopRender();
 			removeEventListener('resize', onResize);
 			cancelAnimationFrame(render);
+			cancelAnimationFrame(canvasRef.current);
 		};
-	}, [requestID]);
+	}, [canvasRef.current]);
 
 	return <canvas className={clN.ball} id="#ball" ref={canvasRef} />;
 };
