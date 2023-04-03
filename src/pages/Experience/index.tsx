@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { AnimationModal } from 'Components';
+import { AnimationModal, ExperienceCanvas } from 'Components';
 import content from 'core/content.json';
 import clN from './index.module.scss';
 
@@ -9,6 +9,8 @@ interface IExperienceProject {
 	responsibilities: string;
 }
 
+const time = ['3.0s', '3.3s', '3.5s', '3.8s'];
+
 export const Experience: FC = () => {
 	const { experience } = content;
 	return (
@@ -17,9 +19,13 @@ export const Experience: FC = () => {
 
 			<div className={clN.experience}>
 				<div className={clN.experience__wrapper}>
-					{experience.map((project: IExperienceProject) => {
+					{experience.map((project: IExperienceProject, index: number) => {
 						return (
-							<div className={clN.experience__content} key={project.title}>
+							<div
+								style={{ animation: `experience ${time[index]} ease-out forwards` }}
+								className={clN.experience__content}
+								key={project.title}
+							>
 								<h2 className={clN.title}>{project.title}</h2>
 								<div className={clN.tools}>
 									<span>Tools: </span>
@@ -33,6 +39,8 @@ export const Experience: FC = () => {
 						);
 					})}
 				</div>
+
+				<ExperienceCanvas />
 			</div>
 		</>
 	);
