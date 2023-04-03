@@ -8,3 +8,4 @@ export * from './SkillItem';
 export * from './BannerCanvas';
 export * from './Road';
 export * from './ExperienceCanvas';
+export * from './AboutAnimation';

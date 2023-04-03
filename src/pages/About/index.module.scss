@@ -5,11 +5,14 @@
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  min-height: 100vh;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
 
   @include display-1024 {
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
   }
 
   &__textWrapper {
@@ -122,7 +125,7 @@
   // body tag open
   &:before {
     content: "<body>";
-    @include tagBefore(190px, 20px);
+    @include tagBefore(20px, 20px);
 
     @include display-1024 {
       left: 30px;
@@ -132,7 +135,7 @@
   // body tag close
   &:after {
     content: "<body/>";
-    @include tagAfter(190px, 20px);
+    @include tagAfter(20px, 20px);
 
     @include display-1024 {
       left: 30px;
