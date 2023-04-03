@@ -1,6 +1,6 @@
 // @ts-nocheck
 /* eslint-disable */
-import { useEffect, useRef, useLayoutEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import TweenLite from 'gsap/TweenLite';
 import TweenMax from 'gsap/TweenMax';
 import { Plus } from './canvasHelpers';
@@ -23,7 +23,7 @@ export const BannerCanvas = () => {
 		return Math.sqrt(dx * dx + dy * dy) || 1;
 	}
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (canvasRef.current) {
 			let c: HTMLCanvasElement = canvasRef.current;
 			let context = c.getContext('2d');

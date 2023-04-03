@@ -7,3 +7,4 @@ export * from './AnimationModal';
 export * from './SkillItem';
 export * from './BannerCanvas';
 export * from './Road';
+export * from './ExperienceCanvas';
