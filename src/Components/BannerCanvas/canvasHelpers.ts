@@ -29,3 +29,11 @@ export class Plus implements IPlus {
 		ctx.restore();
 	}
 }
+
+export const fitToContainer = (canvas: HTMLCanvasElement) => {
+	canvas.style.width = '100%';
+	canvas.style.height = '100%';
+	canvas.width = canvas.clientWidth;
+	canvas.height = canvas.clientHeight;
+	return canvas;
+};

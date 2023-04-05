@@ -3,15 +3,10 @@
 .skills {
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   color: white;
-  padding-bottom: 80px;
-
-  @include display-960 {
-    flex-direction: column;
-    height: 100%;
-    padding-bottom: 100px;
-  }
+  z-index: 5;
+  position: relative;
 
   &__wrapper {
     display: flex;
@@ -21,18 +16,8 @@
     width: 100%;
     padding: 30px 50px 10px 50px;
 
-
-    @include display-1024 {
-      padding: 10px 80px 10px 50px;
-    }
-
-    @include display-960 {
-      width: 100%;
-      margin-top: 130px;
-    }
-
-    @include display-480 {
-      padding: 10px 50px 10px 10px;
+    @include display-768 {
+      padding: 30px 20px 10px 20px;
     }
 
     .title {
@@ -40,37 +25,29 @@
     }
 
     ul {
-      overflow-x: hidden;
       width: 100%;
-      margin-top: 30px;
-      padding-bottom: 30px;
+      padding: 30px 10px;
+      position: relative;
+      overflow-x: hidden;
+
+      li {
+        overflow-x: hidden;
+      }
 
       @include display-768 {
         padding: 0 30px 30px 30px;
       }
-    }
 
-    .text {
-      position: relative;
-      text-align: center;
-      font-size: 22px;
-      line-height: 28px;
-      padding-left: 30px;
-
-      @include display-1200 {
-        font-size: 19px;
+      // body tag open
+      &:before {
+        content: "<ul>";
+        @include tagBefore(0px, 0px);
       }
 
-      @include display-960 {
-        padding-left: 100px;
-        padding-right: 50px;
-      }
-
-      @include display-480 {
-        font-size: 14px;
-        padding-left: 60px;
-        padding-right: 40px;
-        line-height: 26px;
+      // body tag close
+      &:after {
+        content: "<ul/>";
+        @include tagAfter(0px, -10px);
       }
     }
   }
@@ -78,21 +55,13 @@
   // body tag open
   &:before {
     content: "<body>";
-    @include tagBefore(190px, 20px);
-
-    @include display-1024 {
-      left: 30px;
-    }
+    @include tagBefore(20px, 20px);
   }
 
   // body tag close
   &:after {
     content: "<body/>";
-    @include tagAfter(190px, 20px);
-
-    @include display-1024 {
-      left: 30px;
-    }
+    @include tagAfter(20px, 20px);
   }
 }
 

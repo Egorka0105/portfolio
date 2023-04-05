@@ -16,7 +16,7 @@
     width: 100%;
     background-color: $skillsLineCurrentLevel;
     border-radius: 4px;
-    animation: skillsListOpen 1s ease-in-out 2.5s;
+    animation: skillsListOpen 1s ease-in-out 4.2s;
     transform: translateX(-120%);
     animation-fill-mode: forwards;
   }
@@ -31,7 +31,7 @@
     background-color: $skillsLineDefault;
     border-radius: 4px;
     z-index: 5;
-    animation: skillsListOpen 1s ease-in-out 2.0s;
+    animation: skillsListOpen 1s ease-in-out 4s;
     transform: translateX(-120%);
     animation-fill-mode: forwards;
   }

@@ -1,6 +1,6 @@
 // @ts-nocheck
 /* eslint-disable */
-import { useRef, useLayoutEffect, FC } from 'react';
+import { useRef, FC, useLayoutEffect } from 'react';
 import { fitToContainer } from './canvasHelpers';
 import { CanvasRef } from './interfaces';
 import clN from './index.module.scss';
@@ -84,11 +84,11 @@ export const ExperienceCanvas: FC = () => {
 				item.draw(sineRotation, cosineRotation);
 			});
 
-			requestAnimationFrame(render);
+			requestID = window.requestAnimationFrame(render);
 		};
 
 		function stopRender() {
-			cancelAnimationFrame(requestID);
+			window.cancelAnimationFrame(requestID);
 		}
 
 		// Function called after the user resized its screen
@@ -113,18 +113,7 @@ export const ExperienceCanvas: FC = () => {
 			createDots(); // Reset all dots
 		}
 
-		// Variable used to store a timeout when user resized its screen
-		let resizeTimeout;
-
-		// Function called right after user resized its screen
-		function onResize() {
-			// Clear the timeout variable
-			resizeTimeout = window.clearTimeout(resizeTimeout);
-			// Store a new timeout to avoid calling afterResize for every resize event
-			resizeTimeout = window.setTimeout(afterResize, 500);
-		}
-
-		window.addEventListener('resize', onResize);
+		canvas.addEventListener('resize', afterResize);
 
 		// Populate the dots array with random dots
 		createDots();
@@ -134,11 +123,12 @@ export const ExperienceCanvas: FC = () => {
 
 		return () => {
 			stopRender();
-			removeEventListener('resize', onResize);
+			canvas.removeEventListener('resize', afterResize);
 			cancelAnimationFrame(render);
 			cancelAnimationFrame(canvasRef.current);
+			canvasRef.current = null;
 		};
-	}, [canvasRef.current]);
+	}, []);
 
 	return <canvas className={clN.ball} id="#ball" ref={canvasRef} />;
 };
