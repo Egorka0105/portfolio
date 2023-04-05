@@ -120,25 +120,4 @@
       }
     }
   }
-
-
-  // body tag open
-  &:before {
-    content: "<body>";
-    @include tagBefore(20px, 20px);
-
-    @include display-1024 {
-      left: 30px;
-    }
-  }
-
-  // body tag close
-  &:after {
-    content: "<body/>";
-    @include tagAfter(20px, 20px);
-
-    @include display-1024 {
-      left: 30px;
-    }
-  }
 }

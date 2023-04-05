@@ -44,50 +44,50 @@
   "skills": {
     "allSkillsMap": [
       {
-        "key": "htmlItem01",
         "name": "HTML",
         "levelPercent": "90"
       },
       {
-        "key": "cssItem02",
-        "name": "CSS",
-        "levelPercent": "90"
-      },
-      {
-        "key": "scssItem03",
         "name": "Scss",
         "levelPercent": "90"
       },
       {
-        "key": "jsItem04",
         "name": "Js",
         "levelPercent": "80"
       },
       {
-        "key": "gitItem05",
         "name": "Git",
         "levelPercent": "70"
       },
       {
-        "key": "reactItem06",
-        "name": "React",
+        "name": "React.js",
         "levelPercent": "70"
       },
       {
-        "key": "reduxToolkitItem07",
+        "name": "Next.js",
+        "levelPercent": "70"
+      },
+      {
         "name": "Redux-Toolkit",
         "levelPercent": "60"
       },
       {
-        "key": "reduxSagaItem08",
         "name": "Redux-Saga",
+        "levelPercent": "50"
+      },
+      {
+        "name": "TypeScript",
+        "levelPercent": "50"
+      },
+      {
+        "name": "Axios",
         "levelPercent": "60"
       },
       {
-        "key": "typeScriptItem09",
-        "name": "TypeScript",
-        "levelPercent": "50"
+        "name": "Material UI",
+        "levelPercent": "60"
       }
+
     ]
   },
   "experience": [

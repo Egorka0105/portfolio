@@ -13,5 +13,11 @@
     border-bottom: 1px solid $header-border;
     width: 100%;
     color: $nav-bar;
+    transition: ease .3s;
+
+    &:hover {
+      box-shadow: 0 0 28px 7px rgba(115, 134, 231, 0.2) inset;
+      transition: ease .3s;
+    }
   }
 }
